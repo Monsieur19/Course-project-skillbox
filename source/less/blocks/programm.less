@@ -1,0 +1,160 @@
+.programm {
+  margin-bottom: 21px;
+
+  background-image: url("../img/index-can-mobile@1x.png"),
+    url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 80%, center 0%;
+  background-size: 280px 271px, 320px 305px;
+}
+
+@media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+  .programm {
+    background-image: url("../img/index-can-mobile@2x.png"),
+      url("../img/index-background-mobile@2x.jpg");
+  }
+}
+
+.programm__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 27px;
+}
+
+.programm__title {
+  .zero;
+  margin-bottom: 12px;
+
+  .setFont(36px; 36px; "Oswald"; #ffffff;);
+  text-align: center;
+}
+
+.programm p {
+  margin-bottom: 301px;
+
+  .setFont(14px; 14px; "Oswald"; #ffffff;);
+  text-transform: uppercase;
+}
+
+.programm__btn-take-programm {
+  padding-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .programm {
+    margin-bottom: 0;
+
+    background: none;
+  }
+
+  .programm__wrapper {
+    align-items: flex-start;
+    padding-left: 88px;
+    padding-top: 40px;
+    padding-bottom: 529px;
+
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    background-size: 100%;
+  }
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    .programm__wrapper {
+      background-image: url("../img/index-can-tablet@2x.jpg");
+    }
+  }
+
+  .programm__title {
+    width: 427px;
+    margin-bottom: 22px;
+
+    .setFont(60px; 60px;"Oswald";@main-text-color;);
+    text-align: left;
+  }
+
+  .programm p {
+    margin-bottom: 47px;
+
+    .setFont(20px; 20px; "Oswald"; @main-text-color;);
+  }
+
+  .programm__btn-take-programm {
+    width: 245px;
+    padding: 16px 0;
+
+    .setFont(20px; 20px; "Oswald"; #ffffff;);
+  }
+}
+
+@media (min-width: 1300px) {
+  .programm {
+    position: relative;
+    margin-bottom: 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -130px;
+      left: 50%;
+      width: 50%;
+      height: 696px;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-color: #65a93c;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left 0%;
+      z-index: -1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -130px;
+      left: 50%;
+      width: 50%;
+      height: 696px;
+      background-color: #65a93c;
+      z-index: -1;
+    }
+  }
+
+  .programm__wrapper {
+    position: relative;
+
+    padding-top: 92px;
+    padding-bottom: 230px;
+    padding-left: 80px;
+
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-size: 552px 499px;
+    background-position: 67% 10%;
+  }
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    .programm {
+      &::after {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
+    }
+
+    .programm__wrapper {
+      background-image: url("../img/index-can-desktop@2x.png");
+    }
+  }
+
+  .programm__wrapper p {
+    margin-bottom: 51px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .programm::after {
+    background-size: contain;
+    background-position: 100% 0;
+  }
+}

@@ -1,0 +1,25 @@
+.zero () {
+  margin: 0;
+  padding: 0;
+}
+
+.setFont(@size; @line; @family:"Oswald"; @color:@main-text-color;) {
+  font-size: @size;
+  line-height: @line;
+  color: @color;
+  font-family: @family, "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.setOnlyFont(@size; @line;) {
+  font-size: @size;
+  line-height: @line;
+}
+
+.indentText() {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: -100%;
+}
