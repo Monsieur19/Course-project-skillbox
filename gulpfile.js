@@ -1,23 +1,24 @@
 "use strict";
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var less = require("gulp-less");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var csso = require('gulp-csso');
-var rename = require("gulp-rename");
-var imagemin = require('gulp-imagemin');
-var webp = require('gulp-webp');
-var del = require('del');
-var svgstore = require('gulp-svgstore');
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
-var htmlmin = require('gulp-htmlmin');
-var uglify = require('gulp-uglify');
-var pipeline = require('readable-stream').pipeline;
-var server = require("browser-sync").create();
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const less = require("gulp-less");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const csso = require('gulp-csso');
+const rename = require("gulp-rename");
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const del = require('del');
+const svgstore = require('gulp-svgstore');
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
+const htmlmin = require('gulp-htmlmin');
+const uglify = require('gulp-uglify');
+const pipeline = require('readable-stream').pipeline;
+const server = require("browser-sync").create();
+const babel = require('gulp-babel');
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -66,10 +67,10 @@ gulp.task("copy", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/images/*.svg")
+  return gulp.src("source/img/*.svg")
   .pipe(svgstore({inlineSvg:true}))
   .pipe(rename("newSprite.svg"))
-  .pipe(gulp.dest("build/images"))
+  .pipe(gulp.dest("build/img"))
 });
 
 gulp.task("html", function () {
@@ -81,6 +82,9 @@ gulp.task("html", function () {
 
 gulp.task("js", function () {
   return gulp.src('source/js/*.js')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(uglify())
     .pipe(gulp.dest('build/js'));
 });

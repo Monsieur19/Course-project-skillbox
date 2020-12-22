@@ -3,6 +3,7 @@ body {
   padding: 0;
 
   color: @main-text-color;
+  font-size: 16px;
   font-family: "open-sans", "Arial", sans-serif;
   font-weight: 400;
 }
@@ -13,10 +14,44 @@ html {
 
 * {
   box-sizing: inherit;
+
+  transition: .1s;
+
+  &:focus {
+    outline: 2px solid @outline-color;
+  }
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  .zero();
+
+  list-style-type: none;
+}
+
+button {
+  background: none;
+
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  background: none;
+
+  border: none;
+}
+
+fieldset {
+  .zero();
+
+  border: none;
 }
 
 .visually-hidden {
@@ -29,9 +64,4 @@ a {
 
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
-}
-
-.swiper-container {
-  width: 1150px;
-  height: 750px;
 }

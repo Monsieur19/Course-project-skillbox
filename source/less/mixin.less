@@ -3,17 +3,12 @@
   padding: 0;
 }
 
-.setFont(@size; @line; @family:"Oswald"; @color:@main-text-color;) {
+.setFont(@size; @line; @color: @main-text-color) {
   font-size: @size;
   line-height: @line;
   color: @color;
-  font-family: @family, "Arial", sans-serif;
   font-weight: 400;
-}
-
-.setOnlyFont(@size; @line;) {
-  font-size: @size;
-  line-height: @line;
+  font-family: 'open-sans', 'Arial', sans-serif;
 }
 
 .indentText() {

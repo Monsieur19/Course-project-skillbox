@@ -1,0 +1,350 @@
+.edition {
+  margin-bottom: 80px;
+
+  background-image: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.edition__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 10px;
+}
+
+.edition__left {
+  width: 28.13%;
+}
+
+.edition__title {
+  .zero();
+  margin-bottom: 20px;
+
+  .setFont(48px; 65px; #fff;);
+  font-weight: 400;
+}
+
+.edition__category {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.edition__category legend {
+  margin-bottom: 9px;
+
+  .setFont(16px; 32px; #fff;);
+  font-weight: 700;
+}
+
+.edition__label {
+  position: relative;
+  padding-left: 24px;
+
+  .setFont(16px; 32px; #fff;);
+
+  cursor: pointer;
+
+  & span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 10px;
+    height: 10px;
+
+    border: 1px solid #fff;
+    transform: translateY(-50%);
+  }
+
+  & span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 4px;
+
+    display: none;
+    width: 4px;
+    height: 4px;
+
+    background-color: @main-color;
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+  }
+
+  & input:checked + span {
+    color: @main-color;
+    &::before {
+      border-color: @main-color;
+    }
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &:hover {
+    color: @main-color;
+
+    & span::before {
+      border-color: @main-color;
+    }
+
+    & span::after {
+      display: block;
+    }
+  }
+
+  &:active {
+    color: @active-color !important;
+
+    & span::before {
+      border-color: @active-color !important;
+    }
+
+    & span::after {
+      display: none !important;
+    }
+  }
+}
+
+.edition__price h2 {
+  margin-bottom: 10px;
+
+  .setFont(16px; 32px; #fff;);
+  font-weight: 700;
+}
+
+.edition__choice-price {
+  display: flex;
+  max-width: 341px;
+
+  .setFont(16px; 32px; #fff;);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+}
+
+.edition__choice-price input {
+  width: 82px;
+
+  .setFont(16px; 32px; #fff;);
+
+  background-color: rgba(157, 92, 208, 0.5);
+
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+.edition__price-from {
+  padding: 4px 5px 7px 19px;
+}
+
+.edition__input-price-from {
+  padding: 4px 10px 7px 10px;
+}
+
+.edition__price-before {
+  padding: 4px 7px 7px 12px;
+}
+
+.edition__input-price-before {
+  padding: 4px 10px 7px 10px;
+}
+
+.edition__type-money {
+  padding: 4px 10px 7px 10px;
+}
+
+.edition__right {
+  width: 71.87%;
+}
+
+.edition__swiper {
+  position: relative;
+  padding-top: 100px;
+}
+
+.edition__swiper-button-prev,
+.edition__swiper-button-next {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: #666;
+
+  border: 2px solid transparent;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 11px;
+
+    width: 6px;
+    height: 6px;
+
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+
+    transform: rotate(-135deg);
+  }
+
+  &:focus {
+    border-color: @active-color;
+  }
+
+  &:hover {
+    background-color: @main-color;
+  }
+
+  &:active {
+    border-color: @active-color;
+  }
+}
+
+.edition__swiper-button-next {
+  left: 100px;
+
+  &::after {
+    top: 10px;
+    left: 9px;
+    transform: rotate(45deg);
+  }
+}
+
+.edition__swiper-pagination {
+  position: absolute;
+  top: 0;
+  left: 48px;
+
+  .setFont(16px; 32px;);
+  color: #fff;
+}
+
+.edition__swiper-slide {
+  .setFont(16px; 22px; #fff;);
+}
+
+.edition__img-book {
+  margin-bottom: 20px;
+
+  & img {
+    height: auto;
+  }
+}
+
+.edition__name-price-book {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edition__name-book {
+  .zero();
+
+  font-weight: 700;
+}
+
+.edition__auhtor-book {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.edition__btn-order {
+  padding: 6px 20px;
+
+  .setFont(16px; 22px; #fff;);
+  font-weight: 700;
+
+  background-color: transparent;
+
+  border: 2px solid @main-color;
+  border-radius: 100px;
+
+  &:hover {
+    color: #fff;
+
+    background-color: @main-color;
+  }
+
+  &:active {
+    background-color: @active-color;
+
+    border-color: #D1A9F0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .edition__wrapper {
+    position: relative;
+  }
+
+  .edition__price {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+
+    display: flex;
+    align-items: center;
+
+    & h2 {
+      .zero();
+      margin-right: 15px;
+    }
+  }
+
+  .edition__right {
+    width: 68.07%;
+  }
+
+  .edition__swiper {
+    max-width: 629px;
+    margin: 0;
+  }
+
+  .edition__name-book {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .edition__wrapper {
+    flex-direction: column;
+  }
+
+  .edition__left {
+    width: 100%;
+  }
+
+  .edition__category {
+    flex-wrap: wrap;
+    height: 170px;
+  }
+
+  .edition__price {
+    position: static;
+
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+
+  .edition__right {
+    width: 100%;
+  }
+
+  .edition__swiper {
+    width: 100%;
+    padding: 60px 34px 0 33px;
+  }
+}

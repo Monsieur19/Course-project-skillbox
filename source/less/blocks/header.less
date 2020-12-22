@@ -1,10 +1,243 @@
 .header {
-  font-size: 36px;
-  line-height: 36px;
+  margin-bottom: 80px;
+
+  background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 2.jpg') no-repeat;
+  background-size: cover;
 }
 
-@media (min-width: 768px) {
-  .header {
-    .setOnlyFont(60px; 60px;);
+.header__top {
+  background-color: #000;
+}
+
+.header__top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.header__top-burger {
+  display: none;
+}
+
+.header__top-btn-search {
+  display: none;
+}
+
+.header__btn-enter {
+  position: relative;
+
+  .zero();
+  padding-left: 20px;
+
+  .setFont(18px; 24px; #fff);
+
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+
+    width: 13px;
+    height: 13px;
+
+    background-image: url('../img/enter.svg');
+    background-position: 0 -6px;
+  }
+
+  &:hover {
+    color: @hover-color;
+
+    &::after {
+      background-image: url('../img/enterHover.svg');
+    }
+  }
+
+  &:active {
+    color: @main-color;
+
+    &::after {
+      background-image: url('../img/enterActive.svg');
+    }
+  }
+}
+
+.header__middle {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header__middle-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 23px 10px 21px 10px;
+}
+
+.header__middle-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 64.7%;
+}
+
+.header__middle-item {
+  position: relative;
+
+  padding-right: 16px;
+
+  .setFont(18px; 24px; #fff;);
+
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 7px;
+
+    width: 6px;
+    height: 6px;
+
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    color: @main-color;
+
+    &::after {
+      border-color: @main-color;
+    }
+  }
+
+  &:active {
+    color: @active-color;
+
+    &::after {
+      border-color: @active-color;
+    }
+  }
+}
+
+.header__middle-btn-search {
+  width: 22px;
+  height: 22px;
+  margin-left: auto;
+
+  background-image: url('../img/search.svg');
+
+  cursor: pointer;
+
+  &:hover {
+    background-image: url('../img/searchHover.svg');
+  }
+}
+
+.header__middle-search {
+  width: 218px;
+  padding: 6px 0;
+  margin-left: 11px;
+
+  .setFont(18px; 24px; #fff;);
+
+  border-bottom: 1px solid #fff;
+
+  cursor: pointer;
+
+  &::placeholder {
+    color: #fff;
+  }
+
+  &:hover {
+    border-color: @hover-color;
+  }
+}
+
+.header__middle-search:hover .header__middle-btn-search {
+  background-color: @hover-color;
+}
+
+.header__bottom-wrapper {
+  padding: 63px 10px 122px 10px;
+}
+
+.header__bottom-title {
+  display: block;
+  max-width: 500px;
+  margin-bottom: 1px;
+
+  .setFont(72px; 82px; #fff;);
+}
+
+.header__bottom-text {
+  max-width: 530px;
+  .zero();
+  margin-bottom: 92px;
+
+  .setFont(18px; 30px; #fff;);
+  font-weight: 700;
+}
+
+.header__bottom-btn-subscribe {
+  font-weight: 700;
+
+  border: 3px solid transparent;
+
+  &:focus {
+    border: 3px solid @active-color;
+  }
+
+  &:hover {
+    border: 3px solid #D1A9F0;
+  }
+
+  &:active {
+    background-color: @active-color;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__top-burger {
+    display: block;
+  }
+
+  .header__btn-enter {
+    display: none;
+  }
+
+  .header__top-btn-search {
+    display: block;
+    width: 30px;
+    height: 29px;
+    padding: 0;
+  }
+
+  .header__logo img {
+    width: 182px;
+    height: 42px;
+  }
+
+  .header__middle {
+    display: none;
+  }
+
+  .header__bottom-text {
+    max-width: 640px;
+    margin-bottom: 110px;
+  }
+
+  .header__bottom-btn-subscribe {
+    display: inline-block;
   }
 }

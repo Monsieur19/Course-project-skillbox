@@ -1,0 +1,32 @@
+.nav {
+  width: 56%;
+}
+
+.nav__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav__item a {
+  .setFont(18px; 24px; #fff);
+  white-space: nowrap;
+
+  &:hover {
+    color: @hover-color;
+  }
+
+  &:active {
+    color: @active-color;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+}
