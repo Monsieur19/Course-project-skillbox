@@ -1,19 +1,19 @@
 .galery {
   margin-bottom: 80px;
 
-  background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 3 (1).jpg') no-repeat;
+  background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash3(1).jpg') no-repeat;
   background-size: cover;
 }
 
 .galery__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 80px 10px;
+  padding: 80px 10px 65px 10px;
 }
 
 .galery__left {
   width: 27%;
-  padding-right: 50px;
+  padding-right: 32px;
 }
 
 .galery__right {
@@ -22,7 +22,7 @@
 
 .galery__title {
   .zero();
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 
   .setFont(48px; 65px; #fff);
 }
@@ -32,13 +32,13 @@
   flex-direction: column;
   justify-content: flex-start;
   .zero();
-  margin-bottom: 446px;
+  margin-bottom: 475px;
 
   border: none;
 }
 
 .galery__selects legend {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   .setFont(16px; 32px; #fff;);
 }
@@ -61,14 +61,26 @@
   }
 }
 
+.galery__selects .choices__inner {
+  padding: 3px 12px;
+}
+
+.galery__selects .choices::after {
+  right: 16px;
+}
+
+.galery__selects .choices.is-open::after {
+  top: 18px;
+}
+
 .galery__swiper {
   position: relative;
 
   height: 850px ;
-  padding-top: 100px;
+  padding-top: 85px;
 }
 
-.galery__swiper .swiper-slide {
+.galery__swiper .galery__swiper-slide {
   position: relative;
   height: auto;
   max-height: 350px;
@@ -122,8 +134,8 @@
 .galery__swiper-button-prev,
 .galery__swiper-button-next {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 25px;
+  left: 4px;
 
   width: 30px;
   height: 30px;
@@ -160,7 +172,7 @@
 }
 
 .galery__swiper-button-next {
-  left: 100px;
+  left: 104px;
 
   &::after {
     top: 10px;
@@ -171,8 +183,8 @@
 
 .galery__swiper-pagination {
   position: absolute;
-  top: 0;
-  left: 48px;
+  top: 25px;
+  left: 52px;
 
   .setFont(16px; 32px;);
   color: #fff;
@@ -185,6 +197,10 @@
 }
 
 @media (max-width: 1024px) {
+  .galery__wrapper {
+    padding-bottom: 55px;
+  }
+
   .galery__selects {
     margin-bottom: 288px;
   }
@@ -207,7 +223,7 @@
     position: relative;
 
     flex-direction: column;
-    padding-bottom: 164px;
+    padding-bottom: 148px;
   }
 
   .galery__left {
@@ -221,7 +237,7 @@
 
   .galery__note {
     position: absolute;
-    bottom: 80px;
+    bottom: 70px;
     left: 10px;
 
     max-width: 100%;
@@ -232,20 +248,93 @@
   }
 
   .galery__swiper {
-    height: 738px;
+    height: 670px;
     padding-top: 60px;
   }
 
-}
+  .galery__swiper-slide {
+    height: 280px !important;
 
-@media (max-width: 478px) {
-  .galery__swiper {
-    height: 528px;
+    overflow: hidden;
+  }
+
+  .galery__swiper-pagination {
+    top: 0;
+    left: 50px;
+  }
+
+  .galery__swiper-button-prev,
+  .galery__swiper-button-next {
+    top: 0;
+  }
+
+  .galery__swiper-button-prev {
+    left: 0;
+  }
+
+  .galery__swiper-button-next {
+    left: 100px;
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 640px) {
+  .galery__wrapper {
+    padding-top: 50px;
+    padding-bottom: 247px;
+  }
+
+  .galery__title {
+    margin-bottom: 12px;
+
+    .setFont(28px; 38px; #fff;);
+  }
+
+  .galery__left {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .galery__selects {
+    max-width: 100%;
+
+
+    & legend {
+      margin-bottom: 5px;
+    }
+  }
+
   .galery__swiper {
-    height: 428px;
+    max-height: 420px;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+
+  .galery__swiper-slide {
+    height: 367px !important;
+    max-height: 367px !important;
+
+    & img {
+      height: 100%;
+    }
+  }
+
+  .galery__swiper-pagination {
+    top: 387px;
+    left: 125px;
+    z-index: 10;
+  }
+
+  .swiper-button-prev {
+    top: 387px;
+    left: 80px;
+  }
+
+  .swiper-button-next {
+    top: 387px;
+    left: 180px;
+  }
+
+  .galery__note {
+    max-width: 280px;
   }
 }

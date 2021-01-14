@@ -1,5 +1,5 @@
 .about {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 
 .about__wrapper {
@@ -7,13 +7,14 @@
 }
 
 .about__title {
-  margin-bottom: 30px;
+  margin-bottom: 17px;
+  margin-left: -2px;
 
   .setFont(48px; 65px;);
 }
 
 .about__text {
-  max-width: 1030px;
+  max-width: 1080px;
 
   .setFont(16px; 32px;);
 }
@@ -24,12 +25,27 @@
   }
 
   .about__text {
-    max-width: 95%;
+    max-width: 922px;
   }
 }
 
 @media (max-width: 768px) {
+}
+
+@media (max-width: 640px) {
+  .about {
+    margin-bottom: 41px;
+  }
+
+  .about__title {
+    margin-bottom: 12px;
+
+    .setFont(28px; 38px;);
+  }
+
   .about__text {
-    max-width: 630px;
+    .zero();
+
+    .setFont(14px; 28px;);
   }
 }

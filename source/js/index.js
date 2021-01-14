@@ -1,6 +1,7 @@
 const btnEventShowAll = document.querySelector('.event__btn-show-all');
 const listEvent = document.querySelector('.event__list');
 const btnContactForm = document.querySelector('.contact__btn-order');
+const eventSwiper = document.querySelector('.event__swiper-container');
 
 btnEventShowAll.addEventListener('click', (ev) => {
     listEvent.classList.add("active");
@@ -29,3 +30,19 @@ function init(){
   });
   myMap.geoObjects.add(place);
 }
+
+// document.querySelector('.edition__category').addEventListener('click', (ev) => {
+//   console.log(ev.target.nodeName);
+//   const target = ev.target;
+//   if (target.nodeName === 'SPAN') {
+//     target.parentNode.classList.toggle('active');
+//   } else if (target.nodeName === 'LABEL') {
+//     target.classList.toggle('active');
+//   }
+// })
+
+// document.querySelector('.edition__category legend').addEventListener('click', (ev) => {
+//   ev.target.classList.toggle('active');
+//   ev.target.parentNode.classList.toggle('active');
+//   ev.target.parentNode.parentNode.classList.toggle('active');
+// })

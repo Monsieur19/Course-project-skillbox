@@ -1,7 +1,7 @@
 .edition {
   margin-bottom: 80px;
 
-  background-image: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash 4.jpg');
+  background-image: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash4.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -18,7 +18,7 @@
 
 .edition__title {
   .zero();
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 
   .setFont(48px; 65px; #fff;);
   font-weight: 400;
@@ -27,11 +27,11 @@
 .edition__category {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .edition__category legend {
-  margin-bottom: 9px;
+  margin-bottom: 0;
 
   .setFont(16px; 32px; #fff;);
   font-weight: 700;
@@ -77,8 +77,9 @@
 
   & input:checked + span {
     color: @main-color;
+
     &::before {
-      border-color: @main-color;
+      border: 1px solid @main-color;
     }
 
     &::after {
@@ -111,6 +112,10 @@
   }
 }
 
+.edition__label input:checked + span::before {
+  border: 1px solid @main-color !important;
+}
+
 .edition__price h2 {
   margin-bottom: 10px;
 
@@ -141,23 +146,23 @@
 }
 
 .edition__price-from {
-  padding: 4px 5px 7px 19px;
+  padding: 4px 9px 4px 19px;
 }
 
 .edition__input-price-from {
-  padding: 4px 10px 7px 10px;
+  padding: 4px 10px 4px 10px;
 }
 
 .edition__price-before {
-  padding: 4px 7px 7px 12px;
+  padding: 4px 10px 4px 12px;
 }
 
 .edition__input-price-before {
-  padding: 4px 10px 7px 10px;
+  padding: 4px 10px 4px 10px;
 }
 
 .edition__type-money {
-  padding: 4px 10px 7px 10px;
+  padding: 4px 10px 4px 11px;
 }
 
 .edition__right {
@@ -166,13 +171,13 @@
 
 .edition__swiper {
   position: relative;
-  padding-top: 100px;
+  padding-top: 93px;
 }
 
 .edition__swiper-button-prev,
 .edition__swiper-button-next {
   position: absolute;
-  top: 0;
+  top: 33px;
   left: 0;
 
   width: 30px;
@@ -225,7 +230,7 @@
 
 .edition__swiper-pagination {
   position: absolute;
-  top: 0;
+  top: 33px;
   left: 48px;
 
   .setFont(16px; 32px;);
@@ -252,12 +257,20 @@
 .edition__name-book {
   .zero();
 
+  .setFont(16px; 22px; #fff;);
   font-weight: 700;
 }
 
 .edition__auhtor-book {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+
+  .setFont(16px; 22px; #fff;);
+}
+
+.edition__price-book {
+  .setFont(16px; 22px; #fff;);
+  font-style: italic;
 }
 
 .edition__btn-order {
@@ -284,14 +297,20 @@
   }
 }
 
+.edition__price-book-mobile {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .edition__wrapper {
     position: relative;
+
+    padding-bottom: 60px;
   }
 
   .edition__price {
     position: absolute;
-    top: 80px;
+    top: 103px;
     right: 10px;
 
     display: flex;
@@ -303,6 +322,10 @@
     }
   }
 
+  .edition__type-money {
+    padding-right: 20px;
+  }
+
   .edition__right {
     width: 68.07%;
   }
@@ -312,23 +335,26 @@
     margin: 0;
   }
 
+  .edition__img-book {
+    margin-bottom: 6px;
+  }
+
   .edition__name-book {
     font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
-  .edition__wrapper {
-    flex-direction: column;
-  }
-
   .edition__left {
     width: 100%;
   }
 
   .edition__category {
     flex-wrap: wrap;
+    align-content: space-between;
     height: 170px;
+    padding-right: 5px;
+    margin-bottom: 15px;
   }
 
   .edition__price {
@@ -337,6 +363,10 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 50px;
+
+    & h2 {
+      margin-bottom: 5px;
+    }
   }
 
   .edition__right {
@@ -345,6 +375,185 @@
 
   .edition__swiper {
     width: 100%;
-    padding: 60px 34px 0 33px;
+    padding: 60px 0 0 0;
+  }
+
+  .edition__wrapper {
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 63px;
+  }
+
+  .edition__img-book img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .edition {
+    margin-bottom: 50px;
+  }
+
+  .edition__wrapper {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .edition__left {
+    height: 246px;
+  }
+
+  .edition__form {
+    position: relative;
+  }
+
+  .edition__category {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+
+    & legend {
+      position: relative;
+
+      width: 100%;
+      padding: 2px 0 4px 0;
+
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 2px;
+
+        width: 6px;
+        height: 6px;
+
+        border: 1px solid #fff;
+        border-top: none;
+        border-right: none;
+
+        transform: rotate(-45deg);
+      }
+    }
+
+    & label {
+      display: none;
+      &.active {
+        display: block;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+
+  .edition__title {
+    margin-bottom: 12px;
+
+    .setFont(28px; 38px; #fff;);
+  }
+
+  .edition__label {
+    padding: 2px 0 4px 24px;
+  }
+
+  .edition__price {
+    width: 100%;
+  }
+
+  .edition__choice-price input {
+    width: 70px;
+  }
+
+  .edition__price-from {
+    padding: 3px 6px 2px 15px;
+  }
+
+  .edition__input-price-from {
+    padding: 3px 10px 2px 8px;
+  }
+
+  .edition__price-before {
+    padding: 3px 10px 2px 7px;
+  }
+
+  .edition__input-price-before {
+    padding: 3px 10px 2px 7px;
+  }
+
+  .edition__type-money {
+    padding: 3px 10px 2px 6px;
+  }
+
+  .edition__swiper {
+    padding: 0;
+  }
+
+  .edition__swiper-button-prev {
+    display: none;
+  }
+
+  .edition__swiper-button-next {
+    display: none;
+  }
+
+  .edition__swiper-pagination {
+    display: none;
+  }
+
+  .edition__swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .edition__swiper-slide {
+     max-width: 130px;
+     margin-bottom: 49px;
+  }
+
+  .edition__price-book-mobile {
+    display: block;
+    margin-bottom: 12px;
+
+    .setFont(12px; 16px; #fff;);
+  }
+
+  .edition__price-book {
+    display: none;
+  }
+
+  .edition__img-book {
+    margin-bottom: 5px;
+
+    & img {
+      height: 143px;
+    }
+  }
+
+  .edition__name-book {
+    .setFont(12px; 16px; #fff;);
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
+  }
+
+  .edition__auhtor-book {
+    margin-bottom: 2px;
+
+    .setFont(12px; 16px; #fff;);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
+  }
+
+  .edition__btn-order {
+    padding: 8px 35px 12px 35px;
+
+    .setFont(12px; 16px; #fff;);
+    font-weight: 700;
   }
 }

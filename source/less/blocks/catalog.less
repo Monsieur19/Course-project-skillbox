@@ -5,14 +5,14 @@
 .catalog__top {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .catalog__title {
   display: inline-block;
   width: 184px;
   .zero();
-  margin-right: 40px;
+  margin-right: 38px;
 
   .setFont(48px; 65px;);
   font-weight: 400;
@@ -21,14 +21,14 @@
 .catalog__countries {
   display: flex;
   justify-content: space-between;
-  width: 460px;
+  align-items: center;
+  width: 432px;
 }
 
 .catalog__country {
   position: relative;
 
   display: block;
-  align-self: flex-end;
   width: 46px;
   height: 46px;
 
@@ -72,28 +72,28 @@
 }
 
 .catalog__country--france {
-  background-image: url('../img/image 4.png');
+  background-image: url('../img/image4.png');
 }
 
 .catalog__country--germany {
-  background-image: url('../img/image 6.png');
+  background-image: url('../img/image6.png');
 }
 
 .catalog__country--italy {
-  background-image: url('../img/image 7.png');
+  background-image: url('../img/image7.png');
 }
 
 .catalog__country--russia {
-  background-image: url('../img/image 8.png');
+  background-image: url('../img/image8.png');
 }
 
 .catalog__country--belgium {
-  background-image: url('../img/image 5.png');
+  background-image: url('../img/image5.png');
 }
 
 .catalog__text {
-  max-width: 1024px;
-  margin-bottom: 50px;
+  max-width: 1080px;
+  margin-bottom: 39px;
 
   .setFont(16px; 32px;);
 }
@@ -109,7 +109,7 @@
 }
 
 .catalog__img {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   & img {
     height: auto;
@@ -117,20 +117,24 @@
 }
 
 .catalog__author {
-  margin-bottom: 15px;
+  .zero();
+  margin-bottom: 5px;
 
   .setFont(24px; 32px;);
   font-weight: 600;
 }
 
 .catalog__time {
-  margin-bottom: 10px;
+  display: inline-block;
+  margin-bottom: 5px;
 
   .setFont(12px; 16px;);
   color: gray;
 }
 
 .catalog__describe {
+  .zero();
+
   .setFont(16px; 32px;);
 }
 
@@ -189,6 +193,9 @@
 
 .catalog__accordion-title {
   .zero();
+
+  .setFont(24px; 32px;);
+  font-weight: 600;
 }
 
 .ui-state-active {
@@ -245,7 +252,19 @@
   }
 }
 
+.catalog__accordion .ui-accordion-header {
+  padding: 29px 0 33px 0;
+}
+
+.catalog__accordion .ui-accordion-content {
+  padding: 25px 50px 25px 0;
+}
+
 @media (max-width: 1024px) {
+  .catalog__countries {
+    align-items: flex-end;
+  }
+
   .catalog__text {
     max-width: 100%;
   }
@@ -257,11 +276,21 @@
   .catalog__right {
     width: 47.29%;
   }
+
+  .catalog__accordion .ui-accordion-content {
+    height: 439px !important;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
+  .catalog {
+    margin-bottom: 70px;
+  }
+
   .catalog__text {
-    max-width: 640px;
+    margin-bottom: 20px;
   }
 
   .catalog__main {
@@ -274,21 +303,109 @@
 
   .catalog__right {
     width: 100%;
+    margin-bottom: 53px;
+  }
+
+  .catalog__countries {
+    width: 450px;
+    align-items: center;
+  }
+
+  .catalog__accordion .ui-accordion-content {
+    height: 342px !important;
+    padding-right: 10px;
+    align-content: space-between;
   }
 
 }
 
 @media (max-width: 640px) {
+  .catalog {
+    margin-bottom: 52px;
+  }
+
   .catalog__top {
     flex-direction: column;
   }
 
   .catalog__title {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+
+    .setFont(28px; 38px;);
   }
 
   .catalog__countries {
     width: auto;
     max-width: 640px;
+    margin-bottom: 4px;
+  }
+
+  .catalog__country {
+    width: 32px;
+    height: 32px;
+
+    & span::before {
+      top: -10px;
+      left: -10px;
+
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .catalog__text {
+    display: none;
+  }
+
+  .catalog__accordion .ui-accordion-header {
+    padding: 22px 0 19px 0;
+  }
+
+  .catalog__accordion-title {
+    .setFont(18px; 32px;);
+    font-weight: 600;
+  }
+
+  .catalog__accordion-icon {
+    width: 30px;
+    height: 30px;
+
+    &::before {
+      top: 8px;
+      left: 10px;
+
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  .ui-state-active .catalog__accordion-icon::before  {
+    top: 9px;
+  }
+
+  .ui-accordion-content-active.catalog__accordion-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto !important;
+    padding-left: 0;
+    padding-top: 16px;
+    padding-bottom: 21px;
+    margin-bottom: 0;
+  }
+
+  .catalog__right {
+    margin-bottom: 50px;
+  }
+
+  .catalog__img {
+    margin-bottom: 15px;
+  }
+
+  .catalog__author {
+    margin-bottom: 9px;
+  }
+
+  .catalog__describe {
+    max-width: 289px;
   }
 }

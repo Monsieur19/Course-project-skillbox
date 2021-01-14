@@ -8,7 +8,7 @@
   max-width: 1620px;
   .zero();
   padding: 0 10px;
-  margin: 0 auto;
+  margin: 0 auto 16px auto;
 
   .setFont(48px; 65px;);
 }
@@ -35,7 +35,7 @@
 
 .contact__name {
   .zero();
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 
   .setFont(24px; 32px;);
   font-weight: 600;
@@ -43,7 +43,7 @@
 
 .contact__address {
   .zero();
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   .setFont(16px; 32px;);
 }
@@ -52,10 +52,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 1px;
 
   & input {
     width: 400px;
-    padding: 4px 24px;
+    padding: 4px 24px 1px 24px;
     margin-bottom: 23px;
 
     .setFont(16px; 32px;);
@@ -66,14 +67,14 @@
 }
 
 .contact__form-title {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 
   .setFont(24px; 32px;);
 }
 
 .contact__btn-order {
-  padding: 17px 35px;
-  margin-bottom: 23px;
+  padding: 16px 34px 15px 35px;
+  margin-bottom: 38px;
 
   .setFont(18px; 24px; @main-color;);
   font-weight: 700;
@@ -98,7 +99,7 @@
 
 .contact__links-social span {
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 
   .setFont(24px; 32px;);
 }
@@ -156,6 +157,10 @@
   .contact__form input {
     width: 335px;
   }
+
+  .contact__content {
+    padding-top: 125px;
+  }
 }
 
 @media (max-width: 840px) {
@@ -165,6 +170,25 @@
 
   .contact__map {
     width: calc(50% - 6%);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact__title {
+    max-width: 688px;
+  }
+
+  .contact__content-wrapper {
+    height: 700px;
+  }
+
+  .contact__content {
+    max-width: 388px;
+    padding-top: 122px;
+  }
+
+  .contact__map {
+    height: 700px;
   }
 }
 
@@ -195,5 +219,65 @@
 
     width: 100%;
     height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact {
+    margin-bottom: 46px;
+  }
+
+  .contact__title {
+    max-width: 310px;
+    margin-bottom: 12px;
+
+    .setFont(28px; 38px;);
+  }
+
+  .contact__content {
+    width: 310px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    justify-content: center;
+  }
+
+  .contact__name {
+    margin-bottom: 0;
+
+    .setFont(18px; 24px;);
+    font-weight: 600;
+  }
+
+  .contact__address {
+    .setFont(14px; 19px;);
+    margin-bottom: 355px;
+  }
+
+  .contact__map {
+    top: 58px;
+  }
+
+  .contact__form-title {
+    .setFont(18px; 32px;);
+  }
+
+  .contact__form input {
+    width: 100%;
+    padding: 4px 22px 2px 22px;
+    margin-bottom: 20px;
+  }
+
+  .contact__btn-order {
+    padding: 10px 32px 10px 32px;
+    margin-bottom: 20px;
+
+    .setFont(12px; 16px; @main-color;);
+    font-weight: 700;
+  }
+
+  .contact__links-social span {
+    margin-bottom: 7px;
+    .setFont(18px; 32px;);
   }
 }

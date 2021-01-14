@@ -1,8 +1,8 @@
 const swiperGalery = new Swiper('.galery__swiper', {
-  slidesPerView: 2,
-  slidesPerColumn: 2,
-  slidesPerGroup: 2,
-  spaceBetween: 34,
+  slidesPerView: 1,
+  slidesPerColumn: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 0,
 
   pagination: {
     el: '.swiper-pagination',
@@ -15,6 +15,12 @@ const swiperGalery = new Swiper('.galery__swiper', {
   },
 
   breakpoints: {
+    768: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34,
+    },
     1025: {
       slidesPerView: 3,
       slidesPerColumn: 2,
@@ -33,7 +39,7 @@ const swiperGalery = new Swiper('.galery__swiper', {
 const swiperEdition = new Swiper('.edition__swiper', {
   slidesPerView: 2,
   slidesPerGroup: 2,
-  spaceBetween: 50,
+  spaceBetween: 34,
 
   pagination: {
     el: '.swiper-pagination',
@@ -57,9 +63,9 @@ const swiperEdition = new Swiper('.edition__swiper', {
 const projectBtnPrev = document.querySelector('.project__swiper-button-prev');
 const projectBtnNext = document.querySelector('.project__swiper-button-next');
 const swiperProject = new Swiper('.project__swiper', {
-  slidesPerView: 2,
-  slidesPerGroup: 2,
-  spaceBetween: 50,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 0,
 
   navigation: {
     nextEl: '.project__swiper-button-next',
@@ -67,6 +73,11 @@ const swiperProject = new Swiper('.project__swiper', {
   },
 
   breakpoints: {
+    640: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 50,
+    },
     1025: {
       slidesPerView: 3,
       slidesPerGroup: 3,
@@ -83,5 +94,30 @@ const swiperProject = new Swiper('.project__swiper', {
       spaceBetween: 50,
 
     }
+  }
+});
+
+let swiperEvent = new Swiper('.event__swiper-container', {
+  loop: true,
+
+  pagination: {
+    el: '.event__swiper-pagination',
+    type: 'bullets',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+
+window.addEventListener('resize', () => {
+  if (document.body.clientWidth > 640) {
+    swiperEvent.destroy();
+  }
+
+  if (document.body.clientWidth < 640) {
+    swiperEdition.destroy();
   }
 });
