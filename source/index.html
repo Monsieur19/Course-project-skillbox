@@ -39,49 +39,65 @@
       <div class="header__top">
         <div class="header__top-wrapper wrapper">
           <button class="header__top-burger">
-            <svg width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="header__svg-burger" width="36" height="28" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.699997)" fill="white"/>
             <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
             <path d="M24 25.0478H0V28.7H24V25.0478Z" fill="white"/>
             </svg>
+            <svg class="header__svg-cross" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="36" height="28" viewBox="0 0 612.043 612.043" style="enable-background:new 0 0 612.043 612.043;"
+            xml:space="preserve">
+            <g>
+              <g id="cross">
+                <g>
+                  <path fill="#fff" d="M397.503,306.011l195.577-195.577c25.27-25.269,25.27-66.213,0-91.482c-25.269-25.269-66.213-25.269-91.481,0
+                    L306.022,214.551L110.445,18.974c-25.269-25.269-66.213-25.269-91.482,0s-25.269,66.213,0,91.482L214.54,306.033L18.963,501.61
+                    c-25.269,25.269-25.269,66.213,0,91.481c25.269,25.27,66.213,25.27,91.482,0l195.577-195.576l195.577,195.576
+                    c25.269,25.27,66.213,25.27,91.481,0c25.27-25.269,25.27-66.213,0-91.481L397.503,306.011z"/>
+                </g>
+              </g>
+            </g>
+          </svg>
           </button>
-          <a href="#" class="header__logo logo">
-            <img src="img/logo.svg" alt="logo" width="173" height="40">
-          </a>
+          <h1 class="header__logo logo">
+            <a href="#">
+              <img src="img/logo.svg" alt="logo" width="173" height="40">
+            </a>
+          </h1>
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#about">
+                <a class="nav__item-link" href="#about">
                   О нас
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#galery">
+                <a class="nav__item-link" href="#gallery">
                   Галерея
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#catalog">
+                <a class="nav__item-link" href="#catalog">
                   Каталог
                 </a>
               </li>
-              <li class="nav__item">ч
-                <a href="#event">
+              <li class="nav__item">
+                <a class="nav__item-link" href="#event">
                   События
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#edition">
+                <a class="nav__item-link" href="#edition">
                   Издания
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#project">
+                <a class="nav__item-link" href="#project">
                   Проекты
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#contact">
+                <a class="nav__item-link" href="#contact">
                   Контакты
                 </a>
               </li>
@@ -100,36 +116,39 @@
         <div class="header__middle-wrapper wrapper">
           <ul class="header__middle-list">
             <li class="header__middle-item">
-              <a href="#">Реализм</a>
+              <a class="header__middle-item-link" href="#">Реализм</a>
             </li>
             <li class="header__middle-item">
-              <a href="#">Импрессионизм</a>
+              <a class="header__middle-item-link" href="#">Импрессионизм</a>
             </li>
             <li class="header__middle-item">
-              <a href="#">Постимпрессионизм</a>
+              <a class="header__middle-item-link" href="#">Постимпрессионизм</a>
             </li>
             <li class="header__middle-item">
-              <a href="#">Авангард</a>
+              <a class="header__middle-item-link" href="#">Авангард</a>
             </li>
             <li class="header__middle-item">
-              <a href="#">Футуризм</a>
+              <a class="header__middle-item-link" href="#">Футуризм</a>
             </li>
           </ul>
-          <button class="header__middle-btn-search"></button>
-          <input class="header__middle-search" type="text" placeholder="Поиск по сайту">
-        </div>
-      </div>
-      <div class="header__bottom">
-        <div class="header__bottom-wrapper wrapper">
-          <b class="header__bottom-title">Прикоснитесь к прекрасному</b>
-          <p class="header__bottom-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-          <a href="" class="header__bottom-btn-subscribe button">Подписаться на рассылку</a>
+          <form class="header__middle-form">
+            <button class="header__middle-btn-search"></button>
+            <input class="header__middle-search" type="search" placeholder="Поиск по сайту">
+          </form>
         </div>
       </div>
     </div>
   </header>
 
   <main>
+
+    <section class="first">
+      <div class="first__wrapper wrapper">
+        <b class="first__bottom-title">Прикоснитесь к прекрасному</b>
+        <p class="first__bottom-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+        <a href="" class="first__bottom-btn-subscribe button">Подписаться на рассылку</a>
+      </div>
+    </section>
 
     <section class="about" id="about">
       <div class="about__wrapper wrapper">
@@ -138,57 +157,47 @@
       </div>
     </section>
 
-    <section class="galery" id="galery">
-      <div class="galery__wrapper wrapper">
-        <div class="galery__left">
-          <h2 class="galery__title">Галерея</h2>
-          <fieldset class="galery__selects">
+    <section class="gallery" id="gallery">
+      <div class="gallery__wrapper wrapper">
+        <div class="gallery__left">
+          <h2 class="gallery__title">Галерея</h2>
+          <fieldset class="gallery__selects">
             <legend>Фильтровать по:</legend>
-            <select class="galery__select-auhtor">
+            <select class="gallery__select-auhtor">
               <option value="">Автор</option>
-              <option value="">Auhtor 1</option>
-              <option value="">Auhtor 2</option>
-              <option value="">Auhtor 3</option>
-            </select>
-            <select class="galery__select-direction">
               <option value="">Направление</option>
-              <option value="">Направление 1</option>
-              <option value="">Направление 2</option>
-              <option value="">Направление 3</option>
-            </select>
-            <select class="galery__select-technics">
               <option value="">Техника</option>
-              <option value="">Техника 1</option>
-              <option value="">Техника 2</option>
-              <option value="">Техника 3</option></select>
+            </select>
           </fieldset>
-          <div class="galery__note">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией. </div>
+          <div class="gallery__note">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией. </div>
         </div>
-        <div class="galery__right">
-          <div class="swiper-container galery__swiper">
-            <div class="swiper-wrapper galery__swiper-wrapper">
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle72.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle69.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle73.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle68.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle71.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle70(1).jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle72(1).jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle68(1).jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle71(1).jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle69(1).jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle73(1).jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle77.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle78.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle74.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle75.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle79.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle76.jpg" alt="Название картины"><div class="galery__more"></div></div>
-              <div class="swiper-slide galery__swiper-slide"><img src="img/Rectangle70.jpg" alt="Название картины"><div class="galery__more"></div></div>
+        <div class="gallery__right">
+          <div class="swiper-container gallery__swiper">
+            <div class="swiper-wrapper gallery__swiper-wrapper">
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle72.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle69.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle73.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle68.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle71.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle70(1).jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle72(1).jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle68(1).jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle71(1).jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle69(1).jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle73(1).jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle77.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle78.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle74.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle75.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle79.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle76.jpg" alt="Название картины"><div class="gallery__more"></div></div>
+              <div class="swiper-slide gallery__swiper-slide"><img src="img/Rectangle70.jpg" alt="Название картины"><div class="gallery__more"></div></div>
             </div>
-            <div class="swiper-pagination galery__swiper-pagination"></div>
-            <div class="swiper-button-prev galery__swiper-button-prev"></div>
-            <div class="swiper-button-next galery__swiper-button-next"></div>
+            <div class="gallery__swiper-container-btn">
+              <div class="swiper-button-prev gallery__swiper-button-prev"></div>
+              <div class="swiper-pagination gallery__swiper-pagination"></div>
+              <div class="swiper-button-next gallery__swiper-button-next"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -401,52 +410,52 @@
           <form class="edition__form">
             <fieldset class="edition__category">
               <legend>Категории</legend>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Бестселлеры</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Искусство</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Архитектура</span>
               </label>
-              <label class="edition__label active" tabindex="0">
-                <input class="visually-hidden" type="checkbox" checked>
+              <label class="edition__label active">
+                <input class="visually-hidden" type="checkbox" tabindex="0" checked>
                 <span>Дизайн</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Мода</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Детям</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Художественная литература</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Публицистика</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Путеводители</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Философия</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Учебная литература</span>
               </label>
-              <label class="edition__label" tabindex="0">
-                <input class="visually-hidden" type="checkbox">
+              <label class="edition__label">
+                <input class="visually-hidden" type="checkbox" tabindex="0">
                 <span>Журналы и газеты</span>
               </label>
             </fieldset>
@@ -536,9 +545,11 @@
                   <button class="edition__btn-order button">Заказать</button>
                 </div>
             </div>
-            <div class="swiper-button-prev edition__swiper-button-prev"></div>
-            <div class="swiper-button-next edition__swiper-button-next"></div>
-            <div class="swiper-pagination edition__swiper-pagination"></div>
+            <div class="edition__swiper-container-btn">
+              <div class="swiper-button-prev edition__swiper-button-prev"></div>
+              <div class="swiper-pagination edition__swiper-pagination"></div>
+              <div class="swiper-button-next edition__swiper-button-next"></div>
+            </div>
           </div>
         </div>
       </div>

@@ -10,6 +10,17 @@
   padding: 48px 10px;
 }
 
+.footer__logo {
+  transition: .2s;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: .5;
+  }
+}
 
 .footer__list {
   display: flex;
@@ -19,8 +30,18 @@
   width: 45px;
   height: 45px;
 
+  transition: .2s;
+
   &:not(:last-child) {
     margin-right: 20px;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: .5;
   }
 }
 

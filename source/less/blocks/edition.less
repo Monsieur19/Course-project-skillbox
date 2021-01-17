@@ -27,7 +27,7 @@
 .edition__category {
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
+  margin-bottom: 27px;
 }
 
 .edition__category legend {
@@ -45,6 +45,8 @@
 
   cursor: pointer;
 
+  transition: .2s;
+
   & span::before {
     content: '';
     position: absolute;
@@ -55,6 +57,8 @@
     height: 10px;
 
     border: 1px solid #fff;
+
+    transition: .2s;
     transform: translateY(-50%);
   }
 
@@ -64,7 +68,6 @@
     top: 50%;
     left: 4px;
 
-    display: none;
     width: 4px;
     height: 4px;
 
@@ -72,6 +75,9 @@
 
     border-radius: 50%;
 
+    opacity: 0;
+
+    transition: .2s;
     transform: translateY(-50%);
   }
 
@@ -83,7 +89,7 @@
     }
 
     &::after {
-      display: block;
+      opacity: 1;
     }
   }
 
@@ -92,10 +98,6 @@
 
     & span::before {
       border-color: @main-color;
-    }
-
-    & span::after {
-      display: block;
     }
   }
 
@@ -107,17 +109,27 @@
     }
 
     & span::after {
-      display: none !important;
+      opacity: 1;
     }
   }
+
 }
 
 .edition__label input:checked + span::before {
   border: 1px solid @main-color !important;
 }
 
+.edition__label input:focus + span {
+  color: @main-color;
+
+  &::before {
+    border-color: @main-color;
+  }
+}
+
 .edition__price h2 {
-  margin-bottom: 10px;
+  .zero();
+  margin-bottom: 8px;
 
   .setFont(16px; 32px; #fff;);
   font-weight: 700;
@@ -174,11 +186,18 @@
   padding-top: 93px;
 }
 
-.edition__swiper-button-prev,
-.edition__swiper-button-next {
+.edition__swiper-container-btn {
   position: absolute;
   top: 33px;
   left: 0;
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.edition__swiper-button-prev,
+.edition__swiper-button-next {
+  position: relative;
 
   width: 30px;
   height: 30px;
@@ -189,6 +208,8 @@
   border-radius: 50%;
 
   cursor: pointer;
+
+  transition: .2s;
 
   &::after {
     content: '';
@@ -218,20 +239,18 @@
   }
 }
 
-.edition__swiper-button-next {
-  left: 100px;
-
-  &::after {
+.edition__swiper-button-next::after {
     top: 10px;
     left: 9px;
     transform: rotate(45deg);
-  }
+}
+
+.edition__swiper-button-prev {
+  margin-right: 20px;
 }
 
 .edition__swiper-pagination {
-  position: absolute;
-  top: 33px;
-  left: 48px;
+  margin-right: 19px;
 
   .setFont(16px; 32px;);
   color: #fff;
@@ -274,7 +293,7 @@
 }
 
 .edition__btn-order {
-  padding: 6px 20px;
+  padding: 6px 25px 6px 20px;
 
   .setFont(16px; 22px; #fff;);
   font-weight: 700;
@@ -283,6 +302,8 @@
 
   border: 2px solid @main-color;
   border-radius: 100px;
+
+  transition: .2s;
 
   &:hover {
     color: #fff;

@@ -10,10 +10,6 @@
   }
 }
 
-.choices__list--dropdown .choices__item--selectable:first-child {
-  display: none !important;
-}
-
 .choices:focus {
   outline: none;
 }
@@ -45,9 +41,6 @@
 
 .choices[data-type*='select-one'] {
   cursor: pointer;
-}
-
-.choices[data-type*='select-one'] .choices__inner {
 }
 
 .choices[data-type*='select-one'] .choices__input {
@@ -150,27 +143,14 @@
   display: inline-block;
   vertical-align: top;
   width: 100%;
-  border-radius: 2.5px;
+  border-radius: 6px;
   border: 1px solid #fff;
   padding: 6px 14px;
   font-size: 16px;
   line-height: 32px;
-  font-family: 'open-sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 1px;
   overflow: hidden;
-}
-
-.is-focused .choices__inner,
-.is-open .choices__inner {
-  border-color: #b7b7b7;
-}
-
-.is-open .choices__inner {
-  border-radius: 2.5px 2.5px 0 0;
-}
-
-.is-flipped.is-open .choices__inner {
-  border-radius: 0 0 2.5px 2.5px;
 }
 
 .choices__list {
@@ -236,23 +216,19 @@
   z-index: 1;
   position: absolute;
   width: 100%;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: transparent;
   top: 100%;
   margin-top: -1px;
-  border-bottom-left-radius: 2.5px;
-  border-bottom-right-radius: 2.5px;
   overflow: hidden;
   word-break: break-all;
   will-change: visibility;
+
+  border: 1px solid #999;
+  border-radius: 6px;
 }
 
 .choices__list--dropdown.is-active {
   visibility: visible;
-}
-
-.is-open .choices__list--dropdown {
-  border-color: #b7b7b7;
 }
 
 .is-flipped .choices__list--dropdown {
@@ -279,8 +255,17 @@
   font-size: 16px;
   line-height: 32px;
   font-family: "open-sans", sans-serif;
+  color: #999;
 
-  background: #000;
+  background: transparent;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #999;
+  }
+
+  &.is-selected {
+    display: none;
+  }
 }
 
 [dir='rtl'] .choices__list--dropdown .choices__item {
@@ -288,8 +273,6 @@
 }
 
 @media (min-width: 640px) {
-  .choices__list--dropdown .choices__item--selectable {
-  }
   .choices__list--dropdown .choices__item--selectable:after {
     content: attr(data-select-text);
     font-size: 12px;
@@ -311,8 +294,11 @@
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: #fff;
-  color: #000;
+  color: #fff;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  transition: .2s;
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted:after {

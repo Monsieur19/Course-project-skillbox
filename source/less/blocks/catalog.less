@@ -39,6 +39,8 @@
   border: 2px solid transparent;
   border-radius: 100px;
 
+  transition: .2s;
+
   &:hover {
     filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
   }
@@ -93,6 +95,7 @@
 
 .catalog__text {
   max-width: 1080px;
+  .zero();
   margin-bottom: 39px;
 
   .setFont(16px; 32px;);
@@ -151,6 +154,8 @@
 }
 
 .catalog__accordion-item a {
+  transition: .2s;
+
   &:hover {
     color: @main-color;
 
@@ -175,6 +180,8 @@
   border: 2px solid transparent;
   border-radius: 100%;
 
+  transition: .2s;
+
   &::before {
     content: '';
     position: absolute;
@@ -196,6 +203,8 @@
 
   .setFont(24px; 32px;);
   font-weight: 600;
+
+  transition: .2s;
 }
 
 .ui-state-active {

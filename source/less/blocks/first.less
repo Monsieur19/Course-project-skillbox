@@ -1,0 +1,106 @@
+.first {
+  margin-bottom: 80px;
+
+  background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash2.jpg') no-repeat;
+  background-size: cover;
+}
+
+.first__wrapper {
+  padding: 141px 10px 122px 10px;
+}
+
+.first__bottom-title {
+  display: block;
+  max-width: 580px;
+  .zero();
+  margin-left: -4px;
+  margin-bottom: 21px;
+
+  .setFont(72px; 82px; #fff;);
+  font-weight: 700;
+}
+
+.first__bottom-text {
+  max-width: 560px;
+  .zero();
+  margin-bottom: 90px;
+
+  .setFont(18px; 30px; #fff;);
+  font-weight: 700;
+}
+
+.first__bottom-btn-subscribe {
+  display: inline-block;
+  padding: 21px 33px 20px 32px;
+
+  font-weight: 700;
+  letter-spacing: 0.4px;
+
+  border: 3px solid transparent;
+
+  transition: .2s;
+
+  &:focus {
+    border: 3px solid @active-color;
+  }
+
+  &:hover {
+    border: 3px solid #D1A9F0;
+  }
+
+  &:active {
+    background-color: @active-color;
+  }
+}
+
+@media (max-width: 1024px) {
+  .first__wrapper {
+    padding: 113px 10px 113px 10px;
+  }
+
+  .first__bottom-title {
+    margin-bottom: 13px;
+  }
+
+  .first__bottom-text {
+    max-width: 660px;
+    margin-bottom: 134px;
+  }
+
+  .first__bottom-btn-subscribe {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 640px) {
+  .first__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 34px 10px 45px 10px;
+  }
+
+  .first__bottom-title {
+    max-width: 258px;
+    margin-bottom: 13px;
+
+    .setFont(32px; 36px; #fff;);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .first__bottom-text {
+    max-width: 265px;
+    margin-bottom: 40px;
+
+    .setFont(12px; 16px; #fff;);
+    text-align: center;
+  }
+
+  .first__bottom-btn-subscribe {
+    padding: 10px 10px 10px 14px;
+    .setFont(12px; 16px; #fff;);
+    font-weight: 700;
+  }
+}

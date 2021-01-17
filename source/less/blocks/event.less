@@ -96,16 +96,21 @@
 }
 
 .event__link-more {
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-left: 50px;
+  position: absolute;
+  bottom: 44px;
+  left: 51px;
 
-  .setFont(16px; 32px;);
+  display: inline-block;
+  padding-bottom: 0;
+
+  .setFont(16px; 26px;);
   color: @main-color;
 
   border-bottom: 1px solid @main-color;
 
   outline: 0;
+
+  transition: .2s;
 
   &:focus {
     border: 2px solid @outline-color;
@@ -134,6 +139,8 @@
 
   border: 2px solid @main-color;
   border-radius: 100px;
+
+  transition: .2s;
 
   &:hover {
     color: #fff;

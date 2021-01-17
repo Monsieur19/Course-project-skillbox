@@ -1,4 +1,4 @@
-const swiperGalery = new Swiper('.galery__swiper', {
+const swiperGalery = new Swiper('.gallery__swiper', {
   slidesPerView: 1,
   slidesPerColumn: 1,
   slidesPerGroup: 1,
