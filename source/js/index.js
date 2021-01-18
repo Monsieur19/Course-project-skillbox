@@ -33,6 +33,30 @@ function init(){
   myMap.geoObjects.add(place);
 }
 
+new SimpleBar(document.querySelector('.scroll'), {
+  scrollbarMaxSize: 28,
+  autoHide: false,
+});
+
+new SimpleBar(document.querySelector('.scroll2'), {
+  scrollbarMaxSize: 28,
+  autoHide: false,
+});
+
+new SimpleBar(document.querySelector('.scroll3'), {
+  scrollbarMaxSize: 28,
+  autoHide: false,
+});
+
+new SimpleBar(document.querySelector('.scroll4'), {
+  scrollbarMaxSize: 28,
+  autoHide: false,
+});
+
+new SimpleBar(document.querySelector('.scroll5'), {
+  scrollbarMaxSize: 28,
+  autoHide: false,
+});
 
 btnBurger.addEventListener('click', () => {
   headNav.classList.toggle('active');
