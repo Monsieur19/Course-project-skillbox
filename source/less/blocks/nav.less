@@ -1,5 +1,4 @@
 .nav {
-  width: 56.2%;
   margin-right: auto;
 }
 
@@ -17,7 +16,7 @@
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 58px;
 }
 
 .nav__item-link {
@@ -25,7 +24,7 @@
   white-space: nowrap;
   letter-spacing: 1.1px;
 
-  transition: .2s;
+  transition: all .2s ease;
 
   &:hover {
     color: @hover-color;
@@ -34,6 +33,13 @@
   &:active {
     color: @active-color;
   }
+}
+
+@media (max-width: 1500px) {
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
 }
 
 @media (max-width: 1024px) {

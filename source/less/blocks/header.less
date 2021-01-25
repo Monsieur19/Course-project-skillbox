@@ -1,3 +1,11 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
 .header__top {
   background-color: #000;
 }
@@ -10,7 +18,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 28px 10px 23px 10px;
+  padding: 28px 10px 28px 10px;
 
   & > * {
     flex-shrink: 0;
@@ -22,7 +30,7 @@
   .zero();
   margin-right: 11.2%;
 
-  transition: .2s;
+  transition: all .2s ease;
 
   &:hover {
     opacity: .7;
@@ -54,7 +62,7 @@
 
   border: none;
 
-  transition: .2s;
+  transition: all .2s ease;
 
   cursor: pointer;
 
@@ -70,7 +78,7 @@
     background-image: url('../img/enter.svg');
     background-position: 0 -6px;
 
-    transition: .2s;
+    transition: all .2s ease;
   }
 
   &:hover {
@@ -91,12 +99,6 @@
 }
 
 .header__middle {
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  width: 100%;
-
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -108,18 +110,20 @@
 
 .header__middle-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 64.6%;
   margin-right: auto;
 }
 
 .header__middle-item {
   position: relative;
-  padding: 22px 0 22px 0;
+  padding: 22px 0;
 
   &:hover .header__middle-extra-menu {
     display: block;
+  }
+
+  &:not(:last-child) {
+    margin-right: 77px;
   }
 }
 
@@ -132,8 +136,21 @@
   width: 300px;
   height: 300px;
   padding: 40px;
+  padding-bottom: 0;
 
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .header__middle-extra-menu-item {
@@ -149,7 +166,7 @@
 
   background-repeat: no-repeat;
 
-  transition: .2s;
+  transition: all .2s ease;
   cursor: pointer;
 
   &::after {
@@ -165,7 +182,7 @@
 
     background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
 
-    transition: .2s;
+    transition: all .2s ease;
     opacity: 0;
   }
 
@@ -284,7 +301,7 @@
 
   cursor: pointer;
 
-  transition: .2s;
+  transition: all .2s ease;
 
   &:not(:last-child) {
     margin-right: 20px;
@@ -303,7 +320,7 @@
     border-right: 1px solid #fff;
 
     transform: rotate(45deg);
-    transition: .2s;
+    transition: all .2s ease;
   }
 
   &:hover {
@@ -340,7 +357,7 @@
 
   cursor: pointer;
 
-  transition: .2s;
+  transition: all .2s ease;
 
   &:hover {
     background-image: url('../img/searchHover.svg');
@@ -357,7 +374,7 @@
 
   cursor: pointer;
 
-  transition: .2s;
+  transition: all .2s ease;
 
   &::placeholder {
     color: #fff;
@@ -370,6 +387,12 @@
 
 .header__middle-search:hover .header__middle-btn-search {
   background-color: @hover-color;
+}
+
+@media (max-width: 1200px) {
+  .header__logo {
+    margin-right: 5%;
+  }
 }
 
 @media (max-width: 1024px) {

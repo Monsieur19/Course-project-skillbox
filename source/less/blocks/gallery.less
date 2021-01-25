@@ -1,6 +1,4 @@
 .gallery {
-  margin-bottom: 80px;
-
   background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash3(1).jpg') no-repeat;
   background-size: cover;
 }
@@ -51,7 +49,7 @@
   & a {
     color: @main-color;
 
-    transition: .2s;
+    transition: all .2s ease;
 
     &:hover {
       color: @hover-color;
@@ -92,13 +90,13 @@
   &:hover .gallery__more {
     opacity: 1;
 
-    transition: .2s;
+    transition: all .2s ease;
   }
 
   &:active::after {
     opacity: .3;
 
-    transition: .2s;
+    transition: all .2s ease;
   }
 
   &::after {
@@ -162,7 +160,7 @@
 
   cursor: pointer;
 
-  transition: .2s;
+  transition: all .2s ease;
 
   &::after {
     content: '';

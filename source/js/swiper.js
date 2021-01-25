@@ -3,6 +3,7 @@ const swiperGalery = new Swiper('.gallery__swiper', {
   slidesPerColumn: 1,
   slidesPerGroup: 1,
   spaceBetween: 0,
+  loop: true,
 
   pagination: {
     el: '.swiper-pagination',
@@ -40,6 +41,7 @@ const swiperEdition = new Swiper('.edition__swiper', {
   slidesPerView: 2,
   slidesPerGroup: 2,
   spaceBetween: 34,
+  loop: true,
 
   pagination: {
     el: '.swiper-pagination',
@@ -66,6 +68,7 @@ const swiperProject = new Swiper('.project__swiper', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 0,
+  loop: true,
 
   navigation: {
     nextEl: '.project__swiper-button-next',
