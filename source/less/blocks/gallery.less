@@ -6,10 +6,13 @@
 .gallery__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
   padding: 80px 10px 65px 10px;
 }
 
 .gallery__left {
+  display: flex;
+  flex-direction: column;
   width: 27%;
   padding-right: 32px;
 }
@@ -25,12 +28,19 @@
   .setFont(48px; 65px; #fff);
 }
 
+.gallery__left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding-bottom: 5px;
+}
+
 .gallery__selects {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   .zero();
-  margin-bottom: 554px;
 
   border: none;
 }
@@ -76,7 +86,7 @@
 .gallery__swiper {
   position: relative;
 
-  height: 850px ;
+  height: 850px;
   padding-top: 85px;
 }
 

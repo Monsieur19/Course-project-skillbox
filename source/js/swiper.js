@@ -8,6 +8,7 @@ const swiperGalery = new Swiper('.gallery__swiper', {
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
+    clickable: true,
   },
 
   navigation: {
