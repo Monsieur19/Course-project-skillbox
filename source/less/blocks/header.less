@@ -303,10 +303,6 @@
 
   transition: all .2s ease;
 
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
-
   &::after {
     content: '';
     position: absolute;
@@ -389,6 +385,14 @@
   background-color: @hover-color;
 }
 
+@media (max-width: 1350px) {
+  .header__middle-item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .header__logo {
     margin-right: 5%;
@@ -440,10 +444,14 @@
     }
   }
 
-  .header__logo img {
-    width: 188px;
-    height: 42px;
-  }
+  .header__logo {
+    margin-right: 0;
+
+    & img {
+      width: 188px;
+      height: 42px;
+    }
+}
 
   .header__middle {
     display: none;

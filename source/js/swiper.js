@@ -41,7 +41,7 @@ const swiperGalery = new Swiper('.gallery__swiper', {
 const swiperEdition = new Swiper('.edition__swiper', {
   slidesPerView: 2,
   slidesPerGroup: 2,
-  spaceBetween: 34,
+  spaceBetween: 50,
   loop: true,
 
   pagination: {

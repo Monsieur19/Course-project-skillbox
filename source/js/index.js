@@ -10,6 +10,11 @@ btnEventShowAll.addEventListener('click', (ev) => {
     btnEventShowAll.classList.add('visually-hidden');
 })
 
+btnBurger.addEventListener('click', () => {
+  headNav.classList.toggle('active');
+  btnBurger.classList.toggle('active');
+})
+
 ymaps.ready(init);
 function init(){
     // Создание карты.
@@ -57,8 +62,3 @@ new SimpleBar(document.querySelector('.scroll5'), {
   scrollbarMaxSize: 28,
   autoHide: false,
 });
-
-btnBurger.addEventListener('click', () => {
-  headNav.classList.toggle('active');
-  btnBurger.classList.toggle('active');
-})
