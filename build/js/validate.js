@@ -1,0 +1,1 @@
+"use strict";var selector=document.querySelector(".contact__input-tel"),im=new Inputmask("8 (999) 999 99 99");im.mask(selector),new JustValidate(".contact__form",{rules:{name:{required:!0,minLength:2,maxLength:10},tel:{required:!0,function:function(e,t){var n=selector.inputmask.unmaskedvalue();return Number(n)&&10===n.length}},mail:{required:!0,email:!0}}});

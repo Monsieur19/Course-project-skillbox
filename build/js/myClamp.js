@@ -1,0 +1,1 @@
+"use strict";var truncate=document.querySelector(".event__text");$clamp(truncate,{useNativeClamp:!1});

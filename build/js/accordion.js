@@ -1,0 +1,1 @@
+"use strict";$("#accordion").accordion({icons:!1,active:!0,collapsible:!0});

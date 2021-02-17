@@ -1,0 +1,1 @@
+"use strict";var firstSelect=document.querySelector(".gallery__select-auhtor"),choicesFirst=new Choices(firstSelect,{searchEnabled:!1,shouldSort:!1,itemSelectText:""});
