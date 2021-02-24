@@ -33,10 +33,10 @@
 
 
 
-<body>
+<body tabindex="-1">
 
   <h1 class="visually-hidden">
-    Blanchard
+    Blanchard - Художественная галерея
   </h1>
 
   <header class="header">
@@ -119,64 +119,44 @@
         <div class="header__middle-wrapper wrapper">
           <ul class="header__middle-list">
             <li class="header__middle-item">
-              <a class="header__middle-item-link" href="#">Реализм</a>
+              <button class="header__middle-item-link" type="button">Реализм</button>
               <ul class="header__middle-extra-menu scroll">
                 <li class="header__middle-extra-menu-item" tabindex="0">Тинторетто</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Фридрих</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Леонардо</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Верроккьо</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Тинторетто</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Фридрих</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Леонардо</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Верроккьо</li>
               </ul>
             </li>
             <li class="header__middle-item">
-              <a class="header__middle-item-link" href="#">Импрессионизм</a>
+              <button class="header__middle-item-link" type="button">Импрессионизм</button>
               <ul class="header__middle-extra-menu scroll2">
                 <li class="header__middle-extra-menu-item" tabindex="0">Моне</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Сислей</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Мане</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Ренуар</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Моне</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Сислей</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Мане</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Ренуар</li>
               </ul>
             </li>
             <li class="header__middle-item">
-              <a class="header__middle-item-link" href="#">Постимпрессионизм</a>
+              <button class="header__middle-item-link" type="button">Постимпрессионизм</button>
               <ul class="header__middle-extra-menu scroll3">
                 <li class="header__middle-extra-menu-item" tabindex="0">Ван гог</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Сезанн</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Гоген</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Сёра</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Ван гог</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Сезанн</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Гоген</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Сёра</li>
               </ul>
             </li>
             <li class="header__middle-item">
-              <a class="header__middle-item-link" href="#">Авангард</a>
+              <button class="header__middle-item-link" type="button">Авангард</button>
               <ul class="header__middle-extra-menu scroll4">
                 <li class="header__middle-extra-menu-item" tabindex="0">Кандинский</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Маринетти</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Малевич</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Пикассо</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Кандинский</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Маринетти</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Малевич</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Пикассо</li>
               </ul>
             </li>
             <li class="header__middle-item">
-              <a class="header__middle-item-link" href="#">Футуризм</a>
+              <button class="header__middle-item-link" type="button">Футуризм</button>
               <ul class="header__middle-extra-menu scroll5">
-                <li class="header__middle-extra-menu-item" tabindex="0">Карра</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Прателла</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Северини</li>
-                <li class="header__middle-extra-menu-item" tabindex="0">Балла</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Карра</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Прателла</li>
                 <li class="header__middle-extra-menu-item" tabindex="0">Северини</li>
@@ -197,7 +177,7 @@
 
     <section class="first">
       <div class="first__wrapper wrapper">
-        <b class="first__bottom-title">Прикоснитесь к прекрасному</b>
+        <h2 class="first__bottom-title">Прикоснитесь к прекрасному</h2>
         <p class="first__bottom-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
         <a href="" class="first__bottom-btn-subscribe button">Подписаться на рассылку</a>
       </div>
@@ -264,23 +244,23 @@
           <h2 class="catalog__title">Каталог</h2>
           <div class="catalog__countries">
             <label class="catalog__country catalog__country--france" tabindex="0">
-              <input class="visually-hidden" type="radio" name="country">
+              <input class="visually-hidden" type="radio" name="country" tabindex="-1">
               <span></span>
             </label>
             <label class="catalog__country catalog__country--germany" tabindex="0">
-              <input class="visually-hidden" type="radio" name="country">
+              <input class="visually-hidden" type="radio" name="country" tabindex="-1">
               <span></span>
             </label>
             <label class="catalog__country catalog__country--italy" tabindex="0">
-              <input class="visually-hidden" type="radio" name="country" checked>
+              <input class="visually-hidden" type="radio" name="country" tabindex="-1" checked>
               <span></span>
             </label>
             <label class="catalog__country catalog__country--russia" tabindex="0">
-              <input class="visually-hidden" type="radio" name="country">
+              <input class="visually-hidden" type="radio" name="country" tabindex="-1">
               <span></span>
             </label>
-            <label class="catalog__country catalog__country--belgium" tabindex="0">
-              <input class="visually-hidden" type="radio" name="country">
+          <label class="catalog__country catalog__country--belgium" tabindex="0">
+              <input class="visually-hidden" type="radio" name="country" tabindex="-1">
               <span></span>
             </label>
           </div>
@@ -299,31 +279,31 @@
                 <h3 class="catalog__accordion-title">С 1400 по 1499 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list">
-                <li class="catalog__accordion-item" tabindex="0"><a>Бенедетто ди Биндо</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Бергоньоне, Амброджо</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Биссоло, Франческо</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Больтраффио, Джованни</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Бонсиньори, Франческо</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Боттичини, Рафаэлло</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Брамантино</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Бреа, Людовико</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Бьяджо д’Антонио Туччи</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Веккьетта</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Андреа Верроккьо</a></li>
-                <li class="catalog__accordion-item active" tabindex="0"><a>Доменико Гирландайо</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Беноццо Гоццоли</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Граначчи, Франческо</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Грегорио ди Чекко</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Джованни да Удине</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Джованни ди Паоло</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Джорджоне</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Парентино, Бернардо</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Пезеллино</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Пьетро Перуджино</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Перуцци, Бальдассарe</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Пизанелло</a></li>
-                <li class="catalog__accordion-item" tabindex="0"><a>Пинтуриккьо</a></li>
+              <ul class="catalog__accordion-list" >
+                <li class="catalog__accordion-item"><a tabindex="0">Бенедетто ди Биндо</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Бергоньоне, Амброджо</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Биссоло, Франческо</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Больтраффио, Джованни</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Бонсиньори, Франческо</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Боттичини, Рафаэлло</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Брамантино</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Бреа, Людовико</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Бьяджо д’Антонио Туччи</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Веккьетта</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Андреа Верроккьо</a></li>
+                <li class="catalog__accordion-item active"><a tabindex="0">Дом  енико Гирландайо</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Беноццо Гоццоли</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Граначчи, Франческо</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Грегорио ди Чекко</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Джованни да Удине</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Джованни ди Паоло</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Джорджоне</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Парентино, Бернардо</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Пезеллино</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Пьетро Перуджино</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Перуцци, Бальдассарe</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Пизанелло</a></li>
+                <li class="catalog__accordion-item"><a tabindex="0">Пинтуриккьо</a></li>
               </ul>
               <div tabindex="0">
                 <h3 class="catalog__accordion-title">С 1500 по 1599 гг.</h3>
@@ -528,6 +508,11 @@
         </div>
         <div class="edition__right">
           <div class="swiper-container edition__swiper">
+            <div class="edition__swiper-container-btn">
+              <div class="swiper-button-prev edition__swiper-button-prev" tabindex="0"></div>
+              <div class="swiper-pagination edition__swiper-pagination"></div>
+              <div class="swiper-button-next edition__swiper-button-next" tabindex="0"></div>
+            </div>
             <div class="swiper-wrapper edition__swiper-wrapper">
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111.jpg" alt="Искусство цвета" width="350" height="390"></div>
@@ -537,7 +522,7 @@
                   </div>
                   <span class="edition__auhtor-book">Иттен, Иоханнес</span>
                   <span class="edition__price-book-mobile">620 руб</span>
-                  <button class="edition__btn-order button">Заказать</button>
+                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(1).jpg" alt="Типографика" width="350" height="390"></div>
@@ -547,7 +532,7 @@
                   </div>
                   <span class="edition__auhtor-book">Рудер, Эмиль</span>
                   <span class="edition__price-book-mobile">2 450 руб</span>
-                  <button class="edition__btn-order button">Заказать</button>
+                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(2).jpg" alt="Книга про буквы" width="350" height="390"></div>
@@ -557,7 +542,7 @@
                   </div>
                   <span class="edition__auhtor-book">Гордон, Юрий</span>
                   <span class="edition__price-book-mobile">2 200 руб</span>
-                  <button class="edition__btn-order button">Заказать</button>
+                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(3).jpg" alt="Николай Ильин" width="350" height="390"></div>
@@ -567,7 +552,7 @@
                   </div>
                   <span class="edition__auhtor-book">Кричевский, Владимир</span>
                   <span class="edition__price-book-mobile">1 100 руб</span>
-                  <button class="edition__btn-order button">Заказать</button>
+                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(4).jpg" alt="Модульные сетки в граф..." width="350" height="390"></div>
@@ -577,7 +562,7 @@
                   </div>
                   <span class="edition__auhtor-book">Мюллер-Брокманн, Йозеф</span>
                   <span class="edition__price-book-mobile">1 450 руб</span>
-                  <button class="edition__btn-order button">Заказать</button>
+                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(5).jpg" alt="Эволюция графических ст..." width="350" height="390"></div>
@@ -587,7 +572,7 @@
                   </div>
                   <span class="edition__auhtor-book">Хеллер, Чваст</span>
                   <span class="edition__price-book-mobile">3 200 руб</span>
-                  <button class="edition__btn-order button">Заказать</button>
+                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(6).jpg" alt="Искусство и визуальное в..." width="350" height="390"></div>
@@ -597,13 +582,8 @@
                   </div>
                   <span class="edition__auhtor-book">Арнхейм, Рудольф</span>
                   <span class="edition__price-book-mobile">2 200 руб</span>
-                  <button class="edition__btn-order button">Заказать</button>
+                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
                 </div>
-            </div>
-            <div class="edition__swiper-container-btn">
-              <div class="swiper-button-prev edition__swiper-button-prev"></div>
-              <div class="swiper-pagination edition__swiper-pagination"></div>
-              <div class="swiper-button-next edition__swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -618,21 +598,21 @@
         <div class="project__container-swiper">
           <div class="swiper-container project__swiper">
             <div class="swiper-wrapper project__swiper-wrapper">
-              <div class="swiper-slide project__swiper-slide"><img src="img/1932(1).png" alt="FreeLands" width="244" height="63"></div>
-              <div class="swiper-slide project__swiper-slide"><img src="img/2451(1).png" alt="Institute" width="330" height="59"></div>
-              <div class="swiper-slide project__swiper-slide"><img src="img/3201(1).png" alt="WorkHouse" width="269" height="63"></div>
-              <div class="swiper-slide project__swiper-slide"><img src="img/41(1).png" alt="1849" width="123" height="85"></div>
-              <div class="swiper-slide project__swiper-slide"><img src="img/577(1).png" alt="Hiscox" width="173" height="85"></div>
-              <div class="swiper-slide project__swiper-slide"><img src="img/621(1).png" alt="Camden" width="252" height="70"></div>
-              <div class="swiper-slide project__swiper-slide"><img src="img/71(1).png" alt="Stassen" width="286" height="69"></div>
-              <div class="swiper-slide project__swiper-slide"><img src="img/86(1).png" alt="Watts" width="185" height="81"></div>
-              <div class="swiper-slide project__swiper-slide"><img src="img/91(1).png" alt="Esad" width="229" height="65"></div>
+              <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/1932(1).png" alt="FreeLands" width="244" height="63"></div>
+              <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/2451(1).png" alt="Institute" width="330" height="59"></div>
+              <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/3201(1).png" alt="WorkHouse" width="269" height="63"></div>
+              <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/41(1).png" alt="1849" width="123" height="85"></div>
+              <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/577(1).png" alt="Hiscox" width="173" height="85"></div>
+              <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/621(1).png" alt="Camden" width="252" height="70"></div>
+              <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/71(1).png" alt="Stassen" width="286" height="69"></div>
+              <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/86(1).png" alt="Watts" width="185" height="81"></div>
+              <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/91(1).png" alt="Esad" width="229" height="65"></div>
             </div>
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
-          </div>
-          <div class="project__swiper-button-prev"></div>
-          <div class="project__swiper-button-next"></div>
+                </div>
+                <div class="project__swiper-button-prev" tabindex="0"></div>
+                <div class="project__swiper-button-next" tabindex="0"></div>
         </div>
 
       </div>

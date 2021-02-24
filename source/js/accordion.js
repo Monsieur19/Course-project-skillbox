@@ -1,7 +1,8 @@
 ( function() {
   $( "#accordion" ).accordion({
     icons: false,
-    active: true,
+    active: 0,
     collapsible: true,
+    animate: 400,
   });
 } )();

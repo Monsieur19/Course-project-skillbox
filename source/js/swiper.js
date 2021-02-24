@@ -119,6 +119,7 @@ let swiperEvent = new Swiper('.event__swiper-container', {
 window.addEventListener('resize', () => {
   if (document.body.clientWidth > 640) {
     swiperEvent.destroy();
+    swiperEvent.update();
   }
 
   if (document.body.clientWidth < 640) {
