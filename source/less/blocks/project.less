@@ -22,28 +22,25 @@
     }
 
     &:active {
-      color: @active-color;
-
       border-color: @active-color;
+
+      color: @active-color;
     }
   }
 }
 
 .project__help {
   display: inline-block;
-
   width: 16px;
   height: 16px;
   margin: 0 0 0 4px;
+  border-radius: 50%;
 
   .setFont(14px; 16px; #fff;);
   font-weight: 400;
   text-align: center;
 
   background-color: @main-color;
-
-  border-radius: 50%;
-
   cursor: pointer;
 }
 
@@ -54,14 +51,13 @@
 .tippy-content {
   width: 264px;
   padding: 8px 11px;
+  border-radius: 0;
 
   .setFont(12px; 16px; #fff;);
   font-weight: 600;
   text-align: center;
 
   background-color: @border-color;
-
-  border-radius: 0;
 }
 
 .tippy-arrow::before {
@@ -95,7 +91,6 @@
   align-items: center;
   height: 150px;
   padding: 0 10px;
-  box-sizing: border-box;
 
   opacity: 0.5;
   filter: grayscale(100%);
@@ -111,7 +106,6 @@
 
     width: calc(100% - 2px);
     height: calc(100% - 2px);
-
     border: 1px solid @border-color;
   }
 
@@ -141,13 +135,12 @@
 
   width: 30px;
   height: 30px;
-
-  background-color: #ECECEC;
-
   border-radius: 50%;
 
-  transform: translateY(-50%);
+  background-color: #ECECEC;
   cursor: pointer;
+
+  transform: translateY(-50%);
 
   &::after {
     content: '';
@@ -157,7 +150,6 @@
 
     width: 6px;
     height: 6px;
-
     border-top: 1px solid #000;
     border-right: 1px solid #000;
 
@@ -173,6 +165,7 @@
   &::after {
     top: 11px;
     left: 10px;
+
     transform: rotate(45deg);
   }
 }
@@ -192,13 +185,12 @@
 
   .project__help {
     margin-left: 3px;
+    border: 1px solid @main-color;
 
     color: @main-color;
     .setFont(12px; 14px; @main-color;);
 
     background-color: #fff;
-
-    border: 1px solid @main-color;
   }
 
   .project__swiper-slide {
@@ -236,6 +228,7 @@
 
   .project__title {
     margin-bottom: 12px;
+    
     .setFont(28px; 38px;);
   }
 

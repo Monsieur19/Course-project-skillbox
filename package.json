@@ -1,12 +1,11 @@
 {
-  "name": "cat-energy-16",
+  "name": "blanchard",
   "version": "16.0.0",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Blanchard",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
-    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "del": "^4.1.1",
@@ -26,8 +25,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "posthtml-include": "^1.2.0",
-    "stylelint": "^9.10.1",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint": "^9.10.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

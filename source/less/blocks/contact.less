@@ -24,7 +24,6 @@
   justify-content: flex-end;
   flex-shrink: 0;
   width: calc(50% - 279px);
-
   border: 1px solid @border-color;
 }
 
@@ -58,11 +57,10 @@
     width: 400px;
     padding: 4px 24px 1px 24px;
     margin-bottom: 23px;
-
-    .setFont(16px; 32px;);
-
     border: 1px solid @main-text-color;
     border-radius: 100px;
+
+    .setFont(16px; 32px;);
   }
 }
 
@@ -75,14 +73,13 @@
 .contact__btn-order {
   padding: 16px 34px 15px 35px;
   margin-bottom: 38px;
+  border: 2px solid @main-color;
+  border-radius: 100px;
 
   .setFont(18px; 24px; @main-color;);
   font-weight: 700;
 
   background-color: #fff;
-
-  border: 2px solid @main-color;
-  border-radius: 100px;
 
   transition: all .2s ease;
 
@@ -141,12 +138,12 @@
 }
 
 .contact__map {
-  width: calc(50% + 279px);
-  background-color: @main-color;
   flex-shrink: 0;
+  width: calc(50% + 279px);
+
+  background-color: @main-color;
 
   filter: grayscale(100%);
-
 }
 
 @media (max-width: 1620px) {
@@ -296,11 +293,10 @@
   }
 
   .contact__content {
+    justify-content: center;
     width: 310px;
     margin: 0 auto;
     padding: 0 10px;
-
-    justify-content: center;
   }
 
   .contact__name {

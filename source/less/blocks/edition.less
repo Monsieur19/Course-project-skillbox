@@ -53,7 +53,6 @@
 
     width: 10px;
     height: 10px;
-
     border: 1px solid #fff;
 
     transition: all .2s ease;
@@ -68,11 +67,9 @@
 
     width: 4px;
     height: 4px;
-
-    background-color: @main-color;
-
     border-radius: 50%;
 
+    background-color: @main-color;
     opacity: 0;
 
     transition: all .2s ease;
@@ -136,11 +133,10 @@
 .edition__choice-price {
   display: flex;
   max-width: 341px;
-
-  .setFont(16px; 32px; #fff;);
-
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 6px;
+
+  .setFont(16px; 32px; #fff;);
 }
 
 .edition__choice-price input {
@@ -199,11 +195,10 @@
 
   width: 30px;
   height: 30px;
-
-  background-color: #666;
-
   border: 2px solid transparent;
   border-radius: 50%;
+
+  background-color: #666;
 
   cursor: pointer;
 
@@ -217,7 +212,6 @@
 
     width: 6px;
     height: 6px;
-
     border-top: 1px solid #fff;
     border-right: 1px solid #fff;
 
@@ -238,9 +232,10 @@
 }
 
 .edition__swiper-button-next::after {
-    top: 10px;
-    left: 9px;
-    transform: rotate(45deg);
+  top: 10px;
+  left: 9px;
+
+  transform: rotate(45deg);
 }
 
 .edition__swiper-button-prev {
@@ -292,14 +287,13 @@
 
 .edition__btn-order {
   padding: 6px 25px 6px 20px;
+  border: 2px solid @main-color;
+  border-radius: 100px;
 
   .setFont(16px; 22px; #fff;);
   font-weight: 700;
 
   background-color: transparent;
-
-  border: 2px solid @main-color;
-  border-radius: 100px;
 
   transition: all .2s ease;
 
@@ -310,9 +304,9 @@
   }
 
   &:active {
-    background-color: @active-color;
-
     border-color: #D1A9F0;
+
+    background-color: @active-color;
   }
 }
 
@@ -456,7 +450,6 @@
 
       width: 100%;
       padding: 2px 0 4px 0;
-
       border-top: 1px solid #fff;
       border-bottom: 1px solid #fff;
 
@@ -468,7 +461,6 @@
 
         width: 6px;
         height: 6px;
-
         border: 1px solid #fff;
         border-top: none;
         border-right: none;
@@ -574,8 +566,9 @@
     .setFont(12px; 16px; #fff;);
     font-weight: 600;
     text-overflow: ellipsis;
-    overflow: hidden;
     white-space: pre;
+
+    overflow: hidden;
   }
 
   .edition__auhtor-book {
@@ -583,8 +576,9 @@
 
     .setFont(12px; 16px; #fff;);
     text-overflow: ellipsis;
-    overflow: hidden;
     white-space: pre;
+    
+    overflow: hidden;
   }
 
   .edition__btn-order {

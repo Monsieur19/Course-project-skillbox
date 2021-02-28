@@ -1,11 +1,17 @@
-const btnEventShowAll = document.querySelector('.event__btn-show-all');
-const listEvent = document.querySelector('.event__list');
-const btnContactForm = document.querySelector('.contact__btn-order');
-const eventSwiper = document.querySelector('.event__swiper-container');
 const btnBurger = document.querySelector('.header__top-burger');
 const headNav = document.querySelector('.nav');
+const btnEventShowAll = document.querySelector('.event__btn-show-all');
+const listEvent = document.querySelector('.event__list');
+const listHeaderMiddle = document.querySelector('.header__middle-list');
+const allExtraMenu = document.querySelectorAll('.header__middle-extra-menu');
 
-btnEventShowAll.addEventListener('click', (ev) => {
+function dltClassActive (arr) {
+  for (let i = 0; i < arr.length; i++) {
+      arr[i].classList.remove('active');
+  }
+}
+
+btnEventShowAll.addEventListener('click', () => {
     listEvent.classList.add("active");
     btnEventShowAll.classList.add('visually-hidden');
 })
@@ -13,6 +19,17 @@ btnEventShowAll.addEventListener('click', (ev) => {
 btnBurger.addEventListener('click', () => {
   headNav.classList.toggle('active');
   btnBurger.classList.toggle('active');
+})
+
+listHeaderMiddle.addEventListener('click', (ev) => {
+  if (ev.target.tagName === 'BUTTON') {
+    if (ev.target.nextSibling.classList.contains('active')) {
+      ev.target.nextSibling.classList.toggle('active');
+    } else {
+      dltClassActive(allExtraMenu);
+      ev.target.nextSibling.classList.toggle('active');
+    }
+  }
 })
 
 ymaps.ready(init);

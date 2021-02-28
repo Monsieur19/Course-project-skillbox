@@ -51,7 +51,6 @@
   height: 356px;
   padding-top: 13px;
   padding-bottom: 30px;
-
   border: 1px solid @border-color;
   border-top: none;
 }
@@ -102,11 +101,10 @@
 
   display: inline-block;
   padding-bottom: 0;
+  border-bottom: 1px solid @main-color;
 
   .setFont(16px; 26px;);
   color: @main-color;
-
-  border-bottom: 1px solid @main-color;
 
   outline: 0;
 
@@ -121,9 +119,9 @@
   }
 
   &:active {
-    color: @active-color;
-
     border-bottom: 2px solid @active-color;
+
+    color: @active-color;
   }
 }
 
@@ -131,14 +129,13 @@
   display: block;
   padding: 15px 33px 15px 35px;
   margin: 0 auto;
+  border: 2px solid @main-color;
+  border-radius: 100px;
 
   color: @main-color;
   font-weight: 700;
 
   background-color: #fff;
-
-  border: 2px solid @main-color;
-  border-radius: 100px;
 
   transition: all .2s ease;
 
@@ -149,9 +146,9 @@
   }
 
   &:active {
-    background-color: @active-color;
-
     border-color: #D1A9F0;
+
+    background-color: @active-color;
   }
 }
 
@@ -162,7 +159,6 @@
 
   .event__item {
     height: 683px;
-
     margin-bottom: 27px;
   }
 
@@ -259,10 +255,9 @@
       display: block;
       width: 10px;
       height: 10px;
+      border-radius: 50%;
 
       background-color: @border-color;
-
-      border-radius: 50%;
 
       &:not(:last-child) {
         margin-right: 15px;
@@ -276,9 +271,9 @@
 
   .event__list {
     flex-wrap: nowrap;
-
-    overflow: visible;
     margin-bottom: 0;
+    
+    overflow: visible;
   }
 
   .event__item {

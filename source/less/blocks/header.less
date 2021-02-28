@@ -55,16 +55,14 @@
   .zero();
   padding-left: 23px;
   padding-bottom: 5px;
+  border: none;
 
   .setFont(18px; 24px; #fff);
 
   background: none;
-
-  border: none;
+  cursor: pointer;
 
   transition: all .2s ease;
-
-  cursor: pointer;
 
   &::after {
     content: '';
@@ -118,12 +116,8 @@
   position: relative;
   padding: 23px 0 23px 0;
 
-  &:hover .header__middle-extra-menu {
-    display: block;
-  }
-
   &:not(:last-child) {
-    margin-right: 104px;
+    margin-right: 97px;
   }
 }
 
@@ -132,14 +126,13 @@
   left: 0;
   top: 100%;
 
+  display: none;
   width: 300px;
   height: 300px;
   padding: 40px;
   padding-bottom: 0;
 
-  background-color: rgba(0, 0, 0, 0.5);
-
-  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
 
   animation: extra-menu .2s 1 ease;
 
@@ -152,7 +145,11 @@
     width: 100%;
     height: 40px;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &.active {
+    display: block;
   }
 }
 
@@ -161,16 +158,15 @@
 
   width: 220px;
   padding: 9px 12px 10px 12px;
+  border: 1px solid transparent;
 
   .setFont(14px; 19px; #fff;);
   font-weight: 600;
 
-  border: 1px solid transparent;
-
   background-repeat: no-repeat;
+  cursor: pointer;
 
   transition: all .2s ease;
-  cursor: pointer;
 
   &::after {
     content: '';
@@ -184,9 +180,9 @@
     height: 100%;
 
     background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
+    opacity: 0;
 
     transition: all .2s ease;
-    opacity: 0;
   }
 
   &:hover {
@@ -311,11 +307,10 @@
     content: '';
     position: absolute;
     right: 4px;
-    top: 10px;
+    top: 9px;
 
     width: 6px;
     height: 6px;
-
     border-bottom: 1px solid #fff;
     border-right: 1px solid #fff;
 
@@ -354,7 +349,6 @@
   background-image: url('../img/search.svg');
   background-repeat: no-repeat;
   background-position: 0 6px;
-
   cursor: pointer;
 
   transition: all .2s ease;
@@ -367,10 +361,9 @@
 .header__middle-search {
   width: 218px;
   padding: 2px 0 1px 0;
+  border-bottom: 1px solid #fff;
 
   .setFont(18px; 24px; #fff;);
-
-  border-bottom: 1px solid #fff;
 
   cursor: pointer;
 
