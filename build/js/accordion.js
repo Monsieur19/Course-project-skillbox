@@ -1,1 +1,1 @@
-"use strict";$("#accordion").accordion({icons:!1,active:0,collapsible:!0,animate:400});
+"use strict";$(".catalog__accordion").accordion({icons:!1,active:0,collapsible:!0,animate:400});

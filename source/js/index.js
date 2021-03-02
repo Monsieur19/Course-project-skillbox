@@ -4,6 +4,7 @@ const btnEventShowAll = document.querySelector('.event__btn-show-all');
 const listEvent = document.querySelector('.event__list');
 const listHeaderMiddle = document.querySelector('.header__middle-list');
 const allExtraMenu = document.querySelectorAll('.header__middle-extra-menu');
+const allCatalogItem = document.querySelectorAll('.catalog__item');
 
 function dltClassActive (arr) {
   for (let i = 0; i < arr.length; i++) {
@@ -34,15 +35,8 @@ listHeaderMiddle.addEventListener('click', (ev) => {
 
 ymaps.ready(init);
 function init(){
-    // Создание карты.
     var myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
         center: [48.87219657376512,2.354223999999991],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
         zoom: 17
     });
 
@@ -79,3 +73,30 @@ new SimpleBar(document.querySelector('.scroll5'), {
   scrollbarMaxSize: 28,
   autoHide: false,
 });
+
+document.querySelector('.catalog__countries').addEventListener('click', (ev) => {
+  if (ev.target.tagName === 'LABEL') {
+    dltClassActive(allCatalogItem);
+    document.querySelector('.catalog__item--' + ev.target.firstChild.value).classList.add('active');
+  }
+})
+
+document.querySelector('.catalog__list').addEventListener('click', (ev) => {
+  let artist;
+  let allArtists;
+  if (ev.target.tagName === 'A') {
+    artist = ev.target.textContent;
+    allArtists = ev.target.parentNode.parentNode.parentNode.parentNode.querySelectorAll('.catalog__item-artist');
+
+    ev.target.parentNode.parentNode.parentNode.querySelector('.catalog__accordion-item.active').classList.remove('active');
+    ev.target.parentNode.classList.add('active');
+
+    for (let i = 0; i < allArtists.length; i++) {
+      if (allArtists[i].querySelector('.catalog__author').textContent === artist) {
+        dltClassActive(allArtists);
+        allArtists[i].classList.add('active');
+        break;
+      }
+    }
+  }
+})
