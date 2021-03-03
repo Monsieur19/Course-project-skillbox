@@ -3,6 +3,7 @@ const headNav = document.querySelector('.nav');
 const btnEventShowAll = document.querySelector('.event__btn-show-all');
 const listEvent = document.querySelector('.event__list');
 const listHeaderMiddle = document.querySelector('.header__middle-list');
+const allExtraMenuBtn = document.querySelectorAll('.header__middle-item-link');
 const allExtraMenu = document.querySelectorAll('.header__middle-extra-menu');
 const allCatalogItem = document.querySelectorAll('.catalog__item');
 
@@ -24,10 +25,13 @@ btnBurger.addEventListener('click', () => {
 
 listHeaderMiddle.addEventListener('click', (ev) => {
   if (ev.target.tagName === 'BUTTON') {
-    if (ev.target.nextSibling.classList.contains('active')) {
+    if (ev.target.classList.contains('active')) {
       ev.target.nextSibling.classList.toggle('active');
+      ev.target.classList.toggle('active');
     } else {
       dltClassActive(allExtraMenu);
+      dltClassActive(allExtraMenuBtn);
+      ev.target.classList.toggle('active');
       ev.target.nextSibling.classList.toggle('active');
     }
   }
@@ -42,7 +46,7 @@ function init(){
 
   var place = new ymaps.Placemark([48.87219657376512,2.354223999999991], {}, {
     iconLayout: 'default#image',
-    iconImageHref: '../img/icon.svg',
+    // iconImageHref: '../img/icon.svg',
     iconImageSize: [20, 20],
     iconImageOffset: [0, 0]
   });

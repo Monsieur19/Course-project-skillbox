@@ -63,8 +63,6 @@ const swiperEdition = new Swiper('.edition__swiper', {
   }
 });
 
-const projectBtnPrev = document.querySelector('.project__swiper-button-prev');
-const projectBtnNext = document.querySelector('.project__swiper-button-next');
 const swiperProject = new Swiper('.project__swiper', {
   slidesPerView: 1,
   slidesPerGroup: 1,

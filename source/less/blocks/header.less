@@ -303,6 +303,11 @@
 
   transition: all .2s ease;
 
+  &.active:after {
+    top: 13px;
+    transform: rotate(225deg);
+  }
+
   &::after {
     content: '';
     position: absolute;
