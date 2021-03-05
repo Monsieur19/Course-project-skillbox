@@ -1,8 +1,7 @@
-const swiperGalery = new Swiper('.gallery__swiper', {
-  slidesPerView: 1,
-  slidesPerColumn: 1,
-  slidesPerGroup: 1,
-  spaceBetween: 0,
+const swiperGaleryDesktop = new Swiper('.gallery__swiper--desktop', {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 34,
   loop: true,
 
   pagination: {
@@ -17,25 +16,34 @@ const swiperGalery = new Swiper('.gallery__swiper', {
   },
 
   breakpoints: {
-    768: {
-      slidesPerView: 2,
-      slidesPerColumn: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 34,
-    },
     1025: {
       slidesPerView: 3,
-      slidesPerColumn: 2,
       slidesPerGroup: 3,
       spaceBetween: 34,
     },
     1270: {
       slidesPerView: 3,
-      slidesPerColumn: 2,
       slidesPerGroup: 3,
       spaceBetween: 50,
     }
   }
+});
+
+const swiperGaleryMobile = new Swiper('.gallery__swiper--mobile', {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
 const swiperEdition = new Swiper('.edition__swiper', {
