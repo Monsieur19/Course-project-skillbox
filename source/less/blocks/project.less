@@ -1,5 +1,5 @@
 .project {
-  padding: 80px 0;
+  padding: 80px 0 81px 0;
 }
 
 .project__title {
@@ -60,8 +60,8 @@
   background-color: @border-color;
 }
 
-.tippy-arrow::before {
-  border-top-color: @border-color !important;
+.tippy-box[data-theme~='tomato'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: @border-color;
 }
 
 .project__text a {
@@ -90,10 +90,10 @@
   justify-content: center;
   align-items: center;
   height: 150px;
-  padding: 0 10px;
 
   opacity: 0.5;
   filter: grayscale(100%);
+  outline: 0;
   cursor: pointer;
 
   transition: all .2s ease;
@@ -110,6 +110,11 @@
   }
 
   &:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+
+  &:focus {
     opacity: 1;
     filter: grayscale(0%);
   }
@@ -135,9 +140,11 @@
 
   width: 30px;
   height: 30px;
+  border: 2px solid #ECECEC;
   border-radius: 50%;
 
   background-color: #ECECEC;
+  outline: 0;
   cursor: pointer;
 
   transform: translateY(-50%);
@@ -145,8 +152,8 @@
   &::after {
     content: '';
     position: absolute;
-    top: 12px;
-    left: 13px;
+    top: 10px;
+    left: 11px;
 
     width: 6px;
     height: 6px;
@@ -154,6 +161,26 @@
     border-right: 1px solid #000;
 
     transform: rotate(-135deg);
+  }
+
+  &:hover {
+    border-color: @main-color;
+
+    background-color: @main-color;
+    
+    &::after {
+      border-color: #fff;
+    }
+  }
+
+  &:active {
+    border-color: @border-hover-color;
+
+    background-color: @active-color;
+  }
+
+  &:focus {
+    border-color: @outline-color;
   }
 }
 
@@ -163,8 +190,8 @@
   transform: translate(-100%, -50%);
 
   &::after {
-    top: 11px;
-    left: 10px;
+    top: 9px;
+    left: 8px;
 
     transform: rotate(45deg);
   }

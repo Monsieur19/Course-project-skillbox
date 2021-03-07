@@ -88,11 +88,11 @@ document.querySelector('.catalog__countries').addEventListener('click', (ev) => 
 document.querySelector('.catalog__list').addEventListener('click', (ev) => {
   let artist;
   let allArtists;
-  if (ev.target.tagName === 'A') {
+  if (ev.target.tagName === 'BUTTON') {
     artist = ev.target.textContent;
-    allArtists = ev.target.parentNode.parentNode.parentNode.parentNode.querySelectorAll('.catalog__item-artist');
+    allArtists = ev.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelectorAll('.catalog__item-artist');
 
-    ev.target.parentNode.parentNode.parentNode.querySelector('.catalog__accordion-item.active').classList.remove('active');
+    ev.target.parentNode.parentNode.parentNode.parentNode.querySelector('.catalog__accordion-item.active').classList.remove('active');
     ev.target.parentNode.classList.add('active');
 
     for (let i = 0; i < allArtists.length; i++) {

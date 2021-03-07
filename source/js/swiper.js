@@ -102,7 +102,6 @@ const swiperProject = new Swiper('.project__swiper', {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50,
-
     }
   }
 });

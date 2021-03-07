@@ -168,7 +168,7 @@
             </li>
           </ul>
           <form class="header__middle-form">
-            <button class="header__middle-btn-search"></button>
+            <button class="header__middle-btn-search" type="button"></button>
             <input class="header__middle-search" type="search" placeholder="Поиск по сайту">
           </form>
         </div>
@@ -341,20 +341,13 @@
                 <h3 class="catalog__accordion-title">С 1800 по 1899 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list" >
-                <li class="catalog__accordion-item active"><a tabindex="0">Поль Гоген</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Винсент Ван Гог</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Камиль Писсаро</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Поль Гоген</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Винсент Ван Гог</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Камиль Писсаро</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Поль Гоген</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Винсент Ван Гог</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Камиль Писсаро</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Поль Гоген</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Винсент Ван Гог</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Камиль Писсаро</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list" >
+                  <li class="catalog__accordion-item active"><button>Поль Гоген</button></li>
+                  <li class="catalog__accordion-item"><button>Винсент Ван Гог</button></li>
+                  <li class="catalog__accordion-item"><button>Камиль Писсаро</button></li>
+                </ul>
+              </div>
             </div>
           </li>
           <li class="catalog__item catalog__item--germany">
@@ -383,11 +376,13 @@
                 <h3 class="catalog__accordion-title">С 1900 по 1999 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list" >
-                <li class="catalog__accordion-item active"><a tabindex="0">Герхард Рихтер</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Розмари Трокель</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Ансельм Кифер</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list" >
+                  <li class="catalog__accordion-item active"><button>Герхард Рихтер</button></li>
+                  <li class="catalog__accordion-item"><button>Розмари Трокель</button></li>
+                  <li class="catalog__accordion-item"><button>Ансельм Кифер</button></li>
+                </ul>
+              </div>
             </div>
           </li>
           <li class="catalog__item catalog__item--italy active">
@@ -416,92 +411,226 @@
                 <span class="catalog__time">1470 - 1554</span>
                 <p class="catalog__describe">Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции. Помогал учителю в работе над украшением Большого зала Совета Дворца дожей (Венеция). Принимал участие в создании украшений Церкви Иль Реденторе в Венеции.</p>
               </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita4.webp" alt="Больтраффио, Джованни" width="750" height="470"></div>
+                <h3 class="catalog__author">Больтраффио, Джованни</h3>
+                <span class="catalog__time">1470 - 1554</span>
+                <p class="catalog__describe">Джованни Антонио Больтраффио — итальянский художник Высокого Возрождения. Художник происходил из аристократической семьи. Воспитанный в традициях Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita5.jpg" alt="Бонсиньори, Франческо" width="750" height="470"></div>
+                <h3 class="catalog__author">Бонсиньори, Франческо</h3>
+                <span class="catalog__time">1460 - 1487</span>
+                <p class="catalog__describe">Родился около 1460 года в Вероне в семье художника Альберто Бонсиньори. Обучался живописи в мастерской Франческо Бенальо. В 1480 году переехал из Вероны в Венецию, где жил до 1487 года. В ранний период творчества находился под влиянием венецианской живописной школы. Особенное впечатление на Бонсиньори оказало творчество Антонелло да Мессины, Джованни Беллини, Чима да Конельяно и Альвизе Виварини.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita6.jpg" alt="Боттичини, Рафаэлло" width="750" height="470"></div>
+                <h3 class="catalog__author">Боттичини, Рафаэлло</h3>
+                <span class="catalog__time">1477 - 1502</span>
+                <p class="catalog__describe">Рафаэлло принадлежал к флорентийской артистической династии — его дед, Джованни ди Доменико, был известен как художник, расписывавший игральные карты (хотя учёные не исключают, что он мог заниматься и более серьёзной живописью); его отец — Франческо ди Джованни, был известным флорентийским мастером. Первые художественные навыки Рафаэлло получил в мастерской отца; с этой мастерской связан и ранний период его творчества. В 1490-е годы, когда формировался художественный вкус Рафаэлло, мастерская его отца занималась в основном исполнением заказов в провинциальных городках в окрестностях Флоренции. В 1498 году Франческо Боттичини скончался, Рафаэлло унаследовал мастерскую и продолжил работать в провинции. По мнению исследователей его творчества, это был художник скромного дарования, никогда не стремившийся завоевать высоких позиций в интеллектуальном и финансовом центре Тосканы — Флоренции, и довольствовавшийся заказами, которые ему давали провинциальные храмы. Его искусство было эклектичным, и наряду с влиянием отца включало связь с искусством Перуджино, Ридольфо Гирландайо, Лоренцо ди Креди, Фра Бартоломео и др.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita7.jpg" alt="Брамантино" width="750" height="470"></div>
+                <h3 class="catalog__author">Брамантино</h3>
+                <span class="catalog__time">1465 - 1490</span>
+                <p class="catalog__describe">Бартоломео Суарди родился около 1465 года в Милане[1] (по другой версии — в Бергамо[2]).  В Милане, где «царил» Леонардо, Брамантино создал яркий, острый стиль, хотя и страдавший иногда недостатками в передаче перспективы и неточностью изображения архитектурных элементов. Брамантино сформировался под влиянием Бутиноне и графического стиля Падуи и Феррары. Впоследствии он многому научился у Браманте, у которого долгое время состоял помощником (чем и объясняется его прозвище Брамантино — букв. «Маленький Браманте»[3]) и у которого перенял любовь к монументальным формам и драматизму. Некоторые искусствоведы полагают, что Браманте поручал Брамантино, как живописцу, осуществление своих замыслов[3].</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita8.jpg" alt="Бреа, Людовико" width="750" height="470"></div>
+                <h3 class="catalog__author">Бреа, Людовико</h3>
+                <span class="catalog__time">1450  -1479</span>
+                <p class="catalog__describe">Бреа родился в происходившей из Монтальто-Лигуре семье бондарей в Ницце, являвшейся в то время частью Генуэзской республики. Бреа был в основном клерикальным художником, и наиболее значительные его работы представляют собой алтарные картины. Первая значимая работа художника представляет собой роспись францисканского монастыря в Симье (современная Ницца). Прочие работы художника сосредоточены прибрежных поселениях между Монако и Ментоной, между Таджей и Империей и между Савоной и Генуей. Одним из учеников Людовико Бреа был Террамо Пьяджо.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita9.jpg" alt="Бьяджо д’Антонио Туччи" width="750" height="470"></div>
+                <h3 class="catalog__author">Бьяджо д’Антонио Туччи</h3>
+                <span class="catalog__time">1445 - 1516</span>
+                <p class="catalog__describe">Бьяджо д’Антонио Туччи (итал. Biagio di Antonio Tucci; 1446, Флоренция — 1 июня 1516, там же) — итальянский художник эпохи Возрождения. Его творчество было вдохновлено работами Филиппо Липпи, Андреа Верроккьо, Доменико Гирландайо.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita10.jpg" alt="Веккьетта" width="750" height="470"></div>
+                <h3 class="catalog__author">Веккьетта</h3>
+                <span class="catalog__time">1412 - 1480</span>
+                <p class="catalog__describe">Веккьетта (итал. Il Vecchietta — «Старушонка»), настоящее имя Лоренцо ди Пьетро, итал. Lorenzo di Pietro; ок. 1410, Сиена — 6 июня 1480, Сиена) — итальянский художник, скульптор, архитектор и ювелир. Сиенская школа. О Веккьетте сообщает в своих «Жизнеописаниях» Джорджо Вазари и описывает его как человека мрачного и нелюдимого, вечно погружённого в раздумья, и потому прожившего недолго. Позднейшие исследователи пытались имя этого художника увязать с какими-либо архивными данными. Сейчас общепризнанной считается версия, что описанный Вазари Веккьетта — это Лоренцо ди Пьетро ди Джованни, который был крещён в Сиене в 1410 году. Имя этого человека появляется в документах в 1428 году среди членов гильдии художников Сиены.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita11.jpg" alt="Андреа Верроккьо" width="750" height="470"></div>
+                <h3 class="catalog__author">Андреа Верроккьо</h3>
+                <span class="catalog__time">1435 - 1488</span>
+                <p class="catalog__describe">Андре́а дель Верро́ккьо (итал. Andrea del Verrocchio), наст. имя Андреа ди Микеле Чони (итал. Andrea di Michele Cioni; 1435, Флоренция, Флорентийская республика — 10 октября 1488, Венеция, Венецианская республика) — скульптор и живописец эпохи Возрождения, представитель Флорентийской школы. Среди его учеников — Сандро Боттичелли, Пьетро Перуджино, Леонардо да Винчи и Лоренцо ди Креди.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita12.jpg" alt="Беноццо Гоццоли" width="750" height="470"></div>
+                <h3 class="catalog__author">Беноццо Гоццоли</h3>
+                <span class="catalog__time">1420 - 1497</span>
+                <p class="catalog__describe">Бено́ццо Го́ццоли (итал. Benozzo Gozzoli; настоящее имя Беноццо ди Лезе ди Сандро (итал. Benozzo di Lese di Sandro); 1420. Флоренция — 1497, Пистоя) — итальянский художник, автор многочисленных циклов фресок, представитель флорентийской школы живописи.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita13.jpg" alt="Граначчи, Франческо" width="750" height="470"></div>
+                <h3 class="catalog__author">Граначчи, Франческо</h3>
+                <span class="catalog__time">1469 - 1543</span>
+                <p class="catalog__describe">Франческо Граначчи (итал. Francesco Granacci; 23 июля 1469, Флоренция — 30 ноября 1543, там же) — итальянский художник. Франческо Граначчи учился в мастерской Доменико Гирландайо и помогал ему в написании его картин, используя вместо темперы масляные краски. По заказу Лоренцо Медичи Граначчи участвовал в росписи флорентийского Сан-Марко. Позднее он работал с Леонардо да Винчи, Микеланджело и Рафаэлем.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita14.jpg" alt="Грегорио ди Чекко" width="750" height="470"></div>
+                <h3 class="catalog__author">Грегорио ди Чекко</h3>
+                <span class="catalog__time">1390 - 1424</span>
+                <p class="catalog__describe">Грегорио ди Чекко (итал. Gregorio di Cecco; известен с 1418 г. по 1424 г.) — итальянский художник, сиенская школа.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita15.jpg" alt="Джованни да Удине" width="750" height="470"></div>
+                <h3 class="catalog__author">Джованни да Удине</h3>
+                <span class="catalog__time">1487 - 1561</span>
+                <p class="catalog__describe">Джованни да Удине (итал. Giovanni da Udine), также Джованни Нанни (Giovanni Nani / Nanni; 1487, Удине — 1561, Рим) — итальянский живописец, архитектор и декоратор.Учился сначала у Джованни Мартино (итал. Pellegrino da San Daniele) в Удине, затем переехал в Венецию, где стал учеником Джорджоне. В 1514 году переехал в Рим, где поступил в мастерскую Рафаэля и считался одним из наиболее талантливых его учеников. Джорджо Вазари отмечал его стремление к гротеску и большую любовь к изображению природы — как растений и животных, так и неодушевлённых предметов. После смерти Рафаэля работал на кардинала Джулио Медичи (будущего папу Климента VII) по украшению Вилла Мадама, завершив работу к 1525 году; находился в конфликте с Джулио Романо.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita16.jpg" alt="Джованни ди Паоло" width="750" height="470"></div>
+                <h3 class="catalog__author">Джованни ди Паоло</h3>
+                <span class="catalog__time">1403 - 1482</span>
+                <p class="catalog__describe">Джованни ди Паоло (итал. Giovanni di Paolo di Grazia; ок. 1403—1482, Сиена) — итальянский художник эпохи кватроченто, один из самых значительных последователей сиенской школы живописи. Его произведениям присущи повышенная экспрессия, вплоть до экзальтации, и причудливая фантазия.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita17.jpg" alt="Джорджоне" width="750" height="470"></div>
+                <h3 class="catalog__author">Джорджоне</h3>
+                <span class="catalog__time">1477 - 1510</span>
+                <p class="catalog__describe">Джорджо Барбарелли да Кастельфранко, более известный как Джорджоне (итал. Giorgio Barbarelli da Castelfranco, Giorgione; 1477/1478—1510) — итальянский художник, представитель венецианской школы живописи; один из величайших мастеров Высокого Возрождения.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita18.jpg" alt="Парентино, Бернардо" width="750" height="470"></div>
+                <h3 class="catalog__author">Парентино, Бернардо</h3>
+                <span class="catalog__time">1437 - 1531</span>
+                <p class="catalog__describe">Бернардо Парентино (1450—1500) — итальянский художник эпохи Ренессанса. В основном работал в Падуе.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita19.jpg" alt="Пезеллино" width="750" height="470"></div>
+                <h3 class="catalog__author">Пезеллино</h3>
+                <span class="catalog__time">1422 - 1457</span>
+                <p class="catalog__describe">Пезеллино, собств. Франческо ди Стефано (итал. Pesellino, Francesco di Stefano; род. ок. 1422 г. Флоренция — ум. 1457 г. Флоренция) — итальянский живописец.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita20.jpg" alt="Пьетро Перуджино" width="750" height="470"></div>
+                <h3 class="catalog__author">Пьетро Перуджино</h3>
+                <span class="catalog__time">1448 - 1523</span>
+                <p class="catalog__describe">Пьетро Перуджино (итал. Pietro Perugino, дословно «Перуджийский», настоящее имя Пьетро ди Кристофоро Ваннуччи — Pietro di Cristoforo Vannucci; 1446—1524) — итальянский живописец эпохи Возрождения, представитель умбрийской школы.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita21.jpg" alt="Перуцци, Бальдассарe" width="750" height="470"></div>
+                <h3 class="catalog__author">Перуцци, Бальдассарe</h3>
+                <span class="catalog__time">1481 - 1537</span>
+                <p class="catalog__describe">Бальдассаре Томмазо Перуцци (итал. Baldassare Tommaso Peruzzi; 15 января 1481, Сиена — 6 января 1536, Рим) — итальянский архитектор и живописец эпохи Высокого Возрождения и раннего маньеризма.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita22.jpg" alt="Пизанелло" width="750" height="470"></div>
+                <h3 class="catalog__author">Пизанелло</h3>
+                <span class="catalog__time">1395 - 1455</span>
+                <p class="catalog__describe">Анто́нио ди Пу́ччо Пиза́но, или Анто́нио Пизане́лло (итал. Antonio di Puccio Pisano, Antonio Pisanello; ок. 1392—1395, Пиза — вероятно, 1455, Рим) — один из наиболее выдающихся художников эпохи Возрождения и раннего итальянского кватроченто.</p>
+              </li>
+              <li class="catalog__item-artist">
+                <div class="catalog__img"><img src="img/ita23.jpg" alt="Пинтуриккьо" width="750" height="470"></div>
+                <h3 class="catalog__author">Пинтуриккьо</h3>
+                <span class="catalog__time">1454 - 1513</span>
+                <p class="catalog__describe">Пинтури́ккьо (вариант написания — Пинтури́ккио; итал. Pinturicchio; собственно Бернардино ди Бетто (или ди Бенедетто) ди Бьяджо, Bernardino di Betto di Biagio, 1454, Перуджа — 11 декабря 1513, Сиена) — итальянский живописец эпохи Возрождения.</p>
+              </li>
             </ul>
             <div class="catalog__accordion">
               <div tabindex="0">
                 <h3 class="catalog__accordion-title">С 1400 по 1499 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list" >
-                <li class="catalog__accordion-item"><a tabindex="0">Бенедетто ди Биндо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бергоньоне, Амброджо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Биссоло, Франческо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Больтраффио, Джованни</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бонсиньори, Франческо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Боттичини, Рафаэлло</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Брамантино</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бреа, Людовико</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бьяджо д’Антонио Туччи</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Веккьетта</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Андреа Верроккьо</a></li>
-                <li class="catalog__accordion-item active"><a tabindex="0">Доменико Гирландайо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Беноццо Гоццоли</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Граначчи, Франческо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Грегорио ди Чекко</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Джованни да Удине</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Джованни ди Паоло</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Джорджоне</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Парентино, Бернардо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Пезеллино</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Пьетро Перуджино</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Перуцци, Бальдассарe</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Пизанелло</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Пинтуриккьо</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list" >
+                  <li class="catalog__accordion-item"><button>Бенедетто ди Биндо</button></li>
+                  <li class="catalog__accordion-item"><button>Бергоньоне, Амброджо</button></li>
+                  <li class="catalog__accordion-item"><button>Биссоло, Франческо</button></li>
+                  <li class="catalog__accordion-item"><button>Больтраффио, Джованни</button></li>
+                  <li class="catalog__accordion-item"><button>Бонсиньори, Франческо</button></li>
+                  <li class="catalog__accordion-item"><button>Боттичини, Рафаэлло</button></li>
+                  <li class="catalog__accordion-item"><button>Брамантино</button></li>
+                  <li class="catalog__accordion-item"><button>Бреа, Людовико</button></li>
+                  <li class="catalog__accordion-item"><button>Бьяджо д’Антонио Туччи</button></li>
+                  <li class="catalog__accordion-item"><button>Веккьетта</button></li>
+                  <li class="catalog__accordion-item"><button>Андреа Верроккьо</button></li>
+                  <li class="catalog__accordion-item active"><button>Доменико Гирландайо</button></li>
+                  <li class="catalog__accordion-item"><button>Беноццо Гоццоли</button></li>
+                  <li class="catalog__accordion-item"><button>Граначчи, Франческо</button></li>
+                  <li class="catalog__accordion-item"><button>Грегорио ди Чекко</button></li>
+                  <li class="catalog__accordion-item"><button>Джованни да Удине</button></li>
+                  <li class="catalog__accordion-item"><button>Джованни ди Паоло</button></li>
+                  <li class="catalog__accordion-item"><button>Джорджоне</button></li>
+                  <li class="catalog__accordion-item"><button>Парентино, Бернардо</button></li>
+                  <li class="catalog__accordion-item"><button>Пезеллино</button></li>
+                  <li class="catalog__accordion-item"><button>Пьетро Перуджино</button></li>
+                  <li class="catalog__accordion-item"><button>Перуцци, Бальдассарe</button></li>
+                  <li class="catalog__accordion-item"><button>Пизанелло</button></li>
+                  <li class="catalog__accordion-item"><button>Пинтуриккьо</button></li>
+                </ul>
+            </div>
               <div tabindex="0">
                 <h3 class="catalog__accordion-title">С 1500 по 1599 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list">
-                <li class="catalog__accordion-item"><a tabindex="0">Бенедетто ди Биндо</li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бергоньоне, Амброджо</li>
-                <li class="catalog__accordion-item"><a tabindex="0">Биссоло, Франческо</li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list">
+                  <li class="catalog__accordion-item"><button>Бенедетто ди Биндо</button></li>
+                  <li class="catalog__accordion-item"><button>Бергоньоне, Амброджо</button></li>
+                  <li class="catalog__accordion-item"><button>Биссоло, Франческо</button></li>
+                </ul>
+              </div>
               <div tabindex="0">
                 <h3 class="catalog__accordion-title">С 1600 по 1699 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list">
-                <li class="catalog__accordion-item"><a tabindex="0">Бенедетто ди Биндо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бергоньоне, Амброджо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Биссоло, Франческо</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list">
+                  <li class="catalog__accordion-item"><button>Бенедетто ди Биндо</button></li>
+                  <li class="catalog__accordion-item"><button>Бергоньоне, Амброджо</button></li>
+                  <li class="catalog__accordion-item"><button>Биссоло, Франческо</button></li>
+                </ul>
+              </div>
               <div tabindex="0">
                 <h3 class="catalog__accordion-title">С 1700 по 1799 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list">
-                <li class="catalog__accordion-item"><a tabindex="0">Бенедетто ди Биндо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бергоньоне, Амброджо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Биссоло, Франческо</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list">
+                  <li class="catalog__accordion-item"><button>Бенедетто ди Биндо</button></li>
+                  <li class="catalog__accordion-item"><button>Бергоньоне, Амброджо</button></li>
+                  <li class="catalog__accordion-item"><button>Биссоло, Франческо</button></li>
+                </ul>
+              </div>
               <div tabindex="0">
                 <h3 class="catalog__accordion-title">С 1800 по 1899 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list">
-                <li class="catalog__accordion-item"><a tabindex="0">Бенедетто ди Биндо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бергоньоне, Амброджо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Биссоло, Франческо</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list">
+                  <li class="catalog__accordion-item"><button>Бенедетто ди Биндо</button></li>
+                  <li class="catalog__accordion-item"><button>Бергоньоне, Амброджо</button></li>
+                  <li class="catalog__accordion-item"><button>Биссоло, Франческо</button></li>
+                </ul>
+              </div>
               <div tabindex="0">
                 <h3 class="catalog__accordion-title">С 1900 по 1999 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list">
-                <li class="catalog__accordion-item"><a tabindex="0">Бенедетто ди Биндо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бергоньоне, Амброджо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Биссоло, Франческо</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list">
+                  <li class="catalog__accordion-item"><button>Бенедетто ди Биндо</button></li>
+                  <li class="catalog__accordion-item"><button>Бергоньоне, Амброджо</button></li>
+                  <li class="catalog__accordion-item"><button>Биссоло, Франческо</button></li>
+                </ul>
+              </div>
               <div tabindex="0">
                 <h3 class="catalog__accordion-title">С 2000 г.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list">
-                <li class="catalog__accordion-item"><a tabindex="0">Бенедетто ди Биндо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Бергоньоне, Амброджо</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Биссоло, Франческо</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list">
+                  <li class="catalog__accordion-item"><button>Бенедетто ди Биндо</button></li>
+                  <li class="catalog__accordion-item"><button>Бергоньоне, Амброджо</button></li>
+                  <li class="catalog__accordion-item"><button>Биссоло, Франческо</button></li>
+                </ul>
+              </div>
             </div>
           </li>
           <li class="catalog__item catalog__item--russia">
@@ -524,10 +653,12 @@
                 <h3 class="catalog__accordion-title">С 1900 по 1999 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list" >
-                <li class="catalog__accordion-item active"><a tabindex="0">Александр Иванов</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Ольга Булгакова</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list" >
+                  <li class="catalog__accordion-item active"><button>Александр Иванов</button></li>
+                  <li class="catalog__accordion-item"><button>Ольга Булгакова</button></li>
+                </ul>
+              </div>
             </div>
           </li>
           <li class="catalog__item catalog__item--belgium">
@@ -556,17 +687,21 @@
                 <h3 class="catalog__accordion-title">С 1300 по 1399 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list" >
-                <li class="catalog__accordion-item active"><a tabindex="0">Ян ван Эйк</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list" >
+                  <li class="catalog__accordion-item active"><button>Ян ван Эйк</button></li>
+                </ul>
+              </div>
               <div tabindex="0">
                 <h3 class="catalog__accordion-title">С 1500 по 1599 гг.</h3>
                 <div class="catalog__accordion-icon"></div>
               </div>
-              <ul class="catalog__accordion-list" >
-                <li class="catalog__accordion-item"><a tabindex="0">Питер Брейгель Старший</a></li>
-                <li class="catalog__accordion-item"><a tabindex="0">Питер Пауль Рубенс</a></li>
-              </ul>
+              <div class="catalog__accordion-content">
+                <ul class="catalog__accordion-list">
+                  <li class="catalog__accordion-item"><button>Питер Брейгель Старший</button></li>
+                  <li class="catalog__accordion-item"><button>Питер Пауль Рубенс</button></li>
+                </ul>
+              </div>
             </div>
           </li>
         </ul>
@@ -622,7 +757,7 @@
                   <span class="event__time">с 30 марта по 30 апреля</span>
                 </div>
                 <h3 class="event__item-title">XXIV Международная биеннале молодого искусства</h3>
-                <p class="event__text">Внезапно, реплицированные с зарубежных источников, современные исследования представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены исключительно в разрезе маркетинговых и финансовых...</p>
+                <p class="event__text">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
                 <a class="event__link-more" href="">Подробнее</a>
               </div>
             </li>
@@ -634,7 +769,7 @@
                   <span class="event__time">с 8 апреля по 20 мая</span>
                 </div>
                 <h3 class="event__item-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-                <p class="event__text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.</p>
+                <p class="event__text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 <a class="event__link-more" href="">Подробнее</a>
               </div>
             </li>
@@ -730,7 +865,7 @@
                   </div>
                   <span class="edition__auhtor-book">Иттен, Иоханнес</span>
                   <span class="edition__price-book-mobile">620 руб</span>
-                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
+                  <button class="edition__btn-order button">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(1).jpg" alt="Типографика" width="350" height="390"></div>
@@ -740,7 +875,7 @@
                   </div>
                   <span class="edition__auhtor-book">Рудер, Эмиль</span>
                   <span class="edition__price-book-mobile">2 450 руб</span>
-                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
+                  <button class="edition__btn-order button">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(2).jpg" alt="Книга про буквы" width="350" height="390"></div>
@@ -750,7 +885,7 @@
                   </div>
                   <span class="edition__auhtor-book">Гордон, Юрий</span>
                   <span class="edition__price-book-mobile">2 200 руб</span>
-                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
+                  <button class="edition__btn-order button">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(3).jpg" alt="Николай Ильин" width="350" height="390"></div>
@@ -760,7 +895,7 @@
                   </div>
                   <span class="edition__auhtor-book">Кричевский, Владимир</span>
                   <span class="edition__price-book-mobile">1 100 руб</span>
-                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
+                  <button class="edition__btn-order button">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(4).jpg" alt="Модульные сетки в граф..." width="350" height="390"></div>
@@ -770,7 +905,7 @@
                   </div>
                   <span class="edition__auhtor-book">Мюллер-Брокманн, Йозеф</span>
                   <span class="edition__price-book-mobile">1 450 руб</span>
-                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
+                  <button class="edition__btn-order button">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(5).jpg" alt="Эволюция графических ст..." width="350" height="390"></div>
@@ -780,7 +915,7 @@
                   </div>
                   <span class="edition__auhtor-book">Хеллер, Чваст</span>
                   <span class="edition__price-book-mobile">3 200 руб</span>
-                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
+                  <button class="edition__btn-order button">Заказать</button>
                 </div>
                 <div class="swiper-slide edition__swiper-slide">
                   <div class="edition__img-book"><img src="img/Rectangle111(6).jpg" alt="Искусство и визуальное в..." width="350" height="390"></div>
@@ -790,7 +925,7 @@
                   </div>
                   <span class="edition__auhtor-book">Арнхейм, Рудольф</span>
                   <span class="edition__price-book-mobile">2 200 руб</span>
-                  <button class="edition__btn-order button" tabindex="0">Заказать</button>
+                  <button class="edition__btn-order button">Заказать</button>
                 </div>
             </div>
           </div>
@@ -801,7 +936,7 @@
     <section class="project" id="project">
       <div class="project__wrapper wrapper">
         <h2 class="project__title">Проекты</h2>
-        <p class="project__text">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское<span class="project__help project__help--1">i</span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены<span class="project__help project__help--2">i</span> исключительно в разрезе маркетинговых и финансовых<span class="project__help project__help--3">i</span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a href="blanchard-art.ru/projects/about">blanchard-art.ru/projects/about</a></p>
+        <p class="project__text">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское<span class="project__help project__help--1" tabindex="0">i</span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены<span class="project__help project__help--2" tabindex="0">i</span> исключительно в разрезе маркетинговых и финансовых<span class="project__help project__help--3" tabindex="0">i</span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a href="blanchard-art.ru/projects/about">blanchard-art.ru/projects/about</a></p>
         <b class="project__pairs">Партнёры проектов:</b>
         <div class="project__container-swiper">
           <div class="swiper-container project__swiper">
@@ -816,13 +951,10 @@
               <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/86(1).png" alt="Watts" width="185" height="81"></div>
               <div class="swiper-slide project__swiper-slide" tabindex="0"><img src="img/91(1).png" alt="Esad" width="229" height="65"></div>
             </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-                </div>
-                <div class="project__swiper-button-prev" tabindex="0"></div>
-                <div class="project__swiper-button-next" tabindex="0"></div>
+          </div>
+          <div class="project__swiper-button-prev" tabindex="0"></div>
+          <div class="project__swiper-button-next" tabindex="0"></div>
         </div>
-
       </div>
     </section>
 

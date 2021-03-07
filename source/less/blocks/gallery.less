@@ -178,6 +178,7 @@
   border-radius: 50%;
 
   background-color: #666;
+  outline: 0;
   cursor: pointer;
 
   transition: all .2s ease;
@@ -202,6 +203,10 @@
 
   &:active {
     border-color: @active-color;
+  }
+
+  &:focus {
+    border-color: @outline-color;
   }
 }
 
@@ -354,8 +359,8 @@
   }
 
   .gallery__swiper-slide {
-    height: 367px !important;
-    max-height: 367px !important;
+    height: 367px;
+    max-height: 367px;
 
     & img {
       height: 100%;

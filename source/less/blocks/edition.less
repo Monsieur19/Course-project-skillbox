@@ -7,7 +7,7 @@
 .edition__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 80px 10px;
+  padding: 81px 10px 78px 10px;
 }
 
 .edition__left {
@@ -16,7 +16,7 @@
 
 .edition__title {
   .zero();
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 
   .setFont(48px; 65px; #fff;);
   font-weight: 400;
@@ -29,7 +29,7 @@
 }
 
 .edition__category legend {
-  margin-bottom: 0;
+  .zero();
 
   .setFont(16px; 32px; #fff;);
   font-weight: 700;
@@ -37,13 +37,16 @@
 
 .edition__label {
   position: relative;
-  padding-left: 24px;
 
   .setFont(16px; 32px; #fff;);
 
   cursor: pointer;
 
   transition: all .2s ease;
+
+  & span {
+    padding-left: 24px;
+  }
 
   & span::before {
     content: '';
@@ -94,32 +97,32 @@
     & span::before {
       border-color: @main-color;
     }
-  }
-
-  &:active {
-    color: @active-color !important;
-
-    & span::before {
-      border-color: @active-color !important;
-    }
 
     & span::after {
       opacity: 1;
     }
   }
 
+  &:active {
+    color: @active-color;
+
+    & span::before {
+      border-color: @active-color;
+    }
+
+    & span::after {
+      opacity: 0;
+    }
+  }
+
 }
 
 .edition__label input:checked + span::before {
-  border: 1px solid @main-color !important;
+  border: 1px solid @main-color;
 }
 
 .edition__label input:focus + span {
-  color: @main-color;
-
-  &::before {
-    border-color: @main-color;
-  }
+  outline: 2px solid @main-color;
 }
 
 .edition__price h2 {
@@ -199,7 +202,7 @@
   border-radius: 50%;
 
   background-color: #666;
-
+  outline: 0;
   cursor: pointer;
 
   transition: all .2s ease;
@@ -250,6 +253,8 @@
 }
 
 .edition__swiper-slide {
+  padding-bottom: 2px;
+  
   .setFont(16px; 22px; #fff;);
 }
 
@@ -275,7 +280,7 @@
 
 .edition__auhtor-book {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   .setFont(16px; 22px; #fff;);
 }
@@ -286,7 +291,10 @@
 }
 
 .edition__btn-order {
-  padding: 6px 25px 6px 20px;
+  position: relative;
+
+  margin-left: 2px;
+  padding: 6px 19px 8px 20px;
   border: 2px solid @main-color;
   border-radius: 100px;
 
@@ -294,19 +302,37 @@
   font-weight: 700;
 
   background-color: transparent;
+  outline: 0;
 
   transition: all .2s ease;
 
-  &:hover {
-    color: #fff;
+  z-index: 1000;
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+
+    display: none;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border: 2px solid @hover-color;
+    border-radius: 100px;
+  }
+
+  &:hover {
     background-color: @main-color;
   }
 
   &:active {
-    border-color: #D1A9F0;
+    border-color: @border-hover-color;
 
     background-color: @active-color;
+  }
+
+  &:focus::after {
+    display: block;
   }
 }
 
@@ -318,7 +344,12 @@
   .edition__wrapper {
     position: relative;
 
-    padding-bottom: 80px;
+    padding-bottom: 82px;
+    padding-top: 80px;
+  }
+
+  .edition__title {
+    margin-left: -5px;
   }
 
   .edition__price {
@@ -370,8 +401,12 @@
     font-size: 16px;
   }
 
+  .edition__auhtor-book {
+    margin-bottom: 15px;
+  }
+
   .edition__btn-order {
-    padding: 8px 25px 6px 20px;
+    padding: 8px 19px 7px 19px;
   }
 }
 
