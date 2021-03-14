@@ -37,21 +37,21 @@ listHeaderMiddle.addEventListener('click', (ev) => {
   }
 })
 
-ymaps.ready(init);
-function init(){
-    var myMap = new ymaps.Map("map", {
-        center: [48.87219657376512,2.354223999999991],
-        zoom: 17
-    });
+// ymaps.ready(init);
+// function init(){
+//     var myMap = new ymaps.Map("map", {
+//         center: [48.87219657376512,2.354223999999991],
+//         zoom: 17
+//     });
 
-  var place = new ymaps.Placemark([48.87219657376512,2.354223999999991], {}, {
-    iconLayout: 'default#image',
-    // iconImageHref: '../img/icon.svg',
-    iconImageSize: [20, 20],
-    iconImageOffset: [0, 0]
-  });
-  myMap.geoObjects.add(place);
-}
+//   var place = new ymaps.Placemark([48.87219657376512,2.354223999999991], {}, {
+//     iconLayout: 'default#image',
+//     // iconImageHref: '../img/icon.svg',
+//     iconImageSize: [20, 20],
+//     iconImageOffset: [0, 0]
+//   });
+//   myMap.geoObjects.add(place);
+// }
 
 new SimpleBar(document.querySelector('.scroll'), {
   scrollbarMaxSize: 28,

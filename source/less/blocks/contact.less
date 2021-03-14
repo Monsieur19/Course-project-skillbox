@@ -15,21 +15,24 @@
 
 .contact__container {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  max-width: 100%;
 }
 
 .contact__content-wrapper {
   display: flex;
   justify-content: flex-end;
-  flex-shrink: 0;
-  width: calc(50% - 279px);
+  flex-shrink: 1;
+  flex-grow: 1;
+  width: 682px;
   border: 1px solid @border-color;
 }
 
 .contact__content {
-  max-width: 522px;
-  padding: 123px 122px 123px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 532px;
+  padding: 123px 0 123px 10px;
 }
 
 .contact__name {
@@ -159,38 +162,12 @@
 }
 
 .contact__map {
-  flex-shrink: 0;
-  width: calc(50% + 279px);
-
-  background-color: @main-color;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 1238px;
+  height: 700px;
 
   filter: grayscale(100%);
-}
-
-@media (max-width: 1620px) {
-  .contact__content-wrapper {
-    width: 32.62%;
-  }
-
-  .contact__content {
-    width: 100%;
-    max-width: 100%;
-    padding: 80px 0 80px 10px;
-  }
-
-  .contact__map {
-    width: 67.38%;
-  }
-}
-
-@media (max-width: 1440px) {
-  .contact__content-wrapper {
-    width: calc(50% - 50px);
-  }
-
-  .contact__map {
-    width: calc(50% + 50px);
-  }
 }
 
 @media (max-width: 1024px) {
@@ -198,8 +175,11 @@
     align-items: stretch;
   }
 
+  .contact__content-wrapper {
+    width: 487px;
+  }
+
   .contact__content {
-    width: 445px;
     padding-top: 123px;
   }
 
@@ -220,10 +200,6 @@
     padding-right: 32px;
   }
 
-  .contact__content-wrapper {
-    width: calc(50% - 25px);
-  }
-
   .contact__item-link {
     width: 60px;
     height: 60px;
@@ -234,41 +210,11 @@
   }
 
   .contact__map {
-    width: calc(50% + 25px);
-    height: 700px;
+    width: 537px;
   }
 }
 
-@media (max-width: 840px) {
-  .contact__content-wrapper {
-    width: calc(50% + 6%);
-  }
-
-  .contact__map {
-    width: calc(50% - 6%);
-  }
-}
-
-@media (max-width: 768px) {
-  .contact__title {
-    max-width: 688px;
-  }
-
-  .contact__content-wrapper {
-    height: 700px;
-  }
-
-  .contact__content {
-    max-width: 388px;
-    padding-top: 122px;
-  }
-
-  .contact__map {
-    height: 700px;
-  }
-}
-
-@media (max-width: 660px) {
+@media (max-width: 640px) {
   .contact__container {
     position: relative;
   }
@@ -283,11 +229,6 @@
     border: none;
   }
 
-  .contact__content {
-    max-width: 688px;
-    padding: 0 10px;
-  }
-
   .contact__map {
     position: absolute;
     top: 90px;
@@ -295,10 +236,12 @@
 
     width: 100%;
     height: 320px;
-  }
-}
 
-@media (max-width: 640px) {
+    & iframe {
+      height: 100%;
+    }
+  }
+
   .contact {
     margin-bottom: 46px;
   }
