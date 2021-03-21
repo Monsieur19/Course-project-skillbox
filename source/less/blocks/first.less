@@ -68,6 +68,10 @@
 }
 
 @media (max-width: 1024px) {
+  .first {
+    position: relative;
+  }
+  
   .first__wrapper {
     padding: 215px 10px 113px 10px;
   }
@@ -86,7 +90,13 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .first__wrapper {
+    padding-bottom: 115px;
+  }
+}
+
+@media (max-width: 576px) {
   .first__wrapper {
     display: flex;
     flex-direction: column;

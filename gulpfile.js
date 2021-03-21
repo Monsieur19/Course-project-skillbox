@@ -112,4 +112,4 @@ gulp.task("server", function () {
 
 gulp.task("optime", gulp.series("images", "webp"));
 gulp.task("build", gulp.series("clean", "copy", "sprite", "html", "css", "js"));
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("default", gulp.series("build", "server"));

@@ -226,9 +226,13 @@
 }
 
 @media (max-width: 768px) {
+  .project {
+    padding-bottom: 79px;
+  }
+
   .project__text {
     max-width: 660px;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 
     & a {
       display: block;
@@ -245,12 +249,19 @@
 
   .project__swiper-slide {
     height: 106px;
+
+    & img {
+      width: 80%;
+      height: auto;
+      max-height: 80%;
+    }
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .project {
-    margin-bottom: 51px;
+    padding-top: 50px;
+    padding-bottom: 51px;
   }
 
   .project__title {

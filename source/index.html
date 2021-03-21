@@ -52,20 +52,6 @@
             <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
             <path d="M24 25.0478H0V28.7H24V25.0478Z" fill="white"/>
             </svg>
-            <svg class="header__svg-cross" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="36" height="28" viewBox="0 0 612.043 612.043" style="enable-background:new 0 0 612.043 612.043;"
-            xml:space="preserve">
-            <g>
-              <g id="cross">
-                <g>
-                  <path fill="#fff" d="M397.503,306.011l195.577-195.577c25.27-25.269,25.27-66.213,0-91.482c-25.269-25.269-66.213-25.269-91.481,0
-                    L306.022,214.551L110.445,18.974c-25.269-25.269-66.213-25.269-91.482,0s-25.269,66.213,0,91.482L214.54,306.033L18.963,501.61
-                    c-25.269,25.269-25.269,66.213,0,91.481c25.269,25.27,66.213,25.27,91.482,0l195.577-195.576l195.577,195.576
-                    c25.269,25.27,66.213,25.27,91.481,0c25.27-25.269,25.27-66.213,0-91.481L397.503,306.011z"/>
-                </g>
-              </g>
-            </g>
-          </svg>
           </button>
             <a class="header__logo logo" href="#">
               <img src="img/logo.svg" alt="logo" width="173" height="40">
@@ -109,12 +95,16 @@
               </li>
             </ul>
           </nav>
-          <button class="header__top-btn-search">
-            <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
-            </svg>
-          </button>
+          <form class="header__top-form-search">
+            <button class="header__top-btn-search">
+              <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+              </svg>
+            </button>
+            <input class="header__top-search" type="text">
+            <button class="header__top-btn-close-form"></button>
+          </form>
           <button class="header__btn-enter">Войти</button>
         </div>
       </div>
@@ -180,6 +170,49 @@
 
     <section class="first">
       <div class="first__wrapper wrapper">
+        <nav class="nav nav--mobile">
+          <div class="nav__wrapper wrapper">
+            <button class="nav__btn-close"></button>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__item-link" href="#about">
+                  О нас
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item-link" href="#gallery">
+                  Галерея
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item-link" href="#catalog">
+                  Каталог
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item-link" href="#event">
+                  События
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item-link" href="#edition">
+                  Издания
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item-link" href="#project">
+                  Проекты
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__item-link" href="#contact">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <button class="nav__btn-enter button">Войти</button>
+          </div>
+        </nav>
         <h2 class="first__bottom-title">Прикоснитесь к прекрасному</h2>
         <p class="first__bottom-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
         <a class="first__bottom-btn-subscribe button" href="">Подписаться на рассылку</a>
@@ -787,55 +820,81 @@
           <h2 class="edition__title">Издания</h2>
           <form class="edition__form">
             <fieldset class="edition__category">
-              <legend>Категории</legend>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Бестселлеры</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Искусство</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Архитектура</span>
-              </label>
-              <label class="edition__label active">
-                <input class="visually-hidden" type="checkbox" tabindex="0" checked>
-                <span>Дизайн</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Мода</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Детям</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Художественная литература</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Публицистика</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Путеводители</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Философия</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Учебная литература</span>
-              </label>
-              <label class="edition__label">
-                <input class="visually-hidden" type="checkbox" tabindex="0">
-                <span>Журналы и газеты</span>
-              </label>
+              <legend class="edition__category-legend">Категории</legend>
+              <ul class="edition__list">
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Бестселлеры</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Искусство</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Архитектура</span>
+                  </label>
+                </li>
+                <li class="edition__item active">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0" checked>
+                    <span>Дизайн</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Мода</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Детям</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Художественная литература</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Публицистика</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Путеводители</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Философия</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Учебная литература</span>
+                  </label>
+                </li>
+                <li class="edition__item">
+                  <label class="edition__label">
+                    <input class="visually-hidden" type="checkbox" tabindex="0">
+                    <span>Журналы и газеты</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="edition__price">
               <h2>Цена</h2>
@@ -994,7 +1053,7 @@
                         <stop offset="1" stop-color="#229ED9"/>
                         </lineargradient>
                         </defs>
-                        </svg>
+                      </svg>
                     </a>
                   </li>
                 </ul>

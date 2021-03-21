@@ -1,5 +1,6 @@
 const btnBurger = document.querySelector('.header__top-burger');
-const headNav = document.querySelector('.nav');
+const headNav = document.querySelector('.nav--mobile');
+const btnCloseNav = document.querySelector('.nav__btn-close');
 const btnEventShowAll = document.querySelector('.event__btn-show-all');
 const listEvent = document.querySelector('.event__list');
 const listHeaderMiddle = document.querySelector('.header__middle-list');
@@ -23,6 +24,11 @@ btnBurger.addEventListener('click', () => {
   btnBurger.classList.toggle('active');
 })
 
+btnCloseNav.addEventListener('click', () => {
+  headNav.classList.toggle('active');
+  btnBurger.classList.toggle('active');
+})
+
 listHeaderMiddle.addEventListener('click', (ev) => {
   if (ev.target.tagName === 'BUTTON') {
     if (ev.target.classList.contains('active')) {
@@ -37,46 +43,29 @@ listHeaderMiddle.addEventListener('click', (ev) => {
   }
 })
 
-// ymaps.ready(init);
-// function init(){
-//     var myMap = new ymaps.Map("map", {
-//         center: [48.87219657376512,2.354223999999991],
-//         zoom: 17
-//     });
+// btn search
+const btnSearch = document.querySelector('.header__top-btn-search');
+const btnCloseSearch = document.querySelector('.header__top-btn-close-form');
+const headerTopWrapper = document.querySelector('.header__top-wrapper');
 
-//   var place = new ymaps.Placemark([48.87219657376512,2.354223999999991], {}, {
-//     iconLayout: 'default#image',
-//     // iconImageHref: '../img/icon.svg',
-//     iconImageSize: [20, 20],
-//     iconImageOffset: [0, 0]
-//   });
-//   myMap.geoObjects.add(place);
-// }
+btnSearch.addEventListener('click', (ev) => {
+  ev.preventDefault();
+  headerTopWrapper.classList.toggle('active');
+})
 
-new SimpleBar(document.querySelector('.scroll'), {
-  scrollbarMaxSize: 28,
-  autoHide: false,
-});
+btnCloseSearch.addEventListener('click', (ev) => {
+  ev.preventDefault();
+  headerTopWrapper.classList.remove('active');
+})
 
-new SimpleBar(document.querySelector('.scroll2'), {
-  scrollbarMaxSize: 28,
-  autoHide: false,
-});
+//---------------------------
 
-new SimpleBar(document.querySelector('.scroll3'), {
-  scrollbarMaxSize: 28,
-  autoHide: false,
-});
-
-new SimpleBar(document.querySelector('.scroll4'), {
-  scrollbarMaxSize: 28,
-  autoHide: false,
-});
-
-new SimpleBar(document.querySelector('.scroll5'), {
-  scrollbarMaxSize: 28,
-  autoHide: false,
-});
+allExtraMenu.forEach(el => {
+  new SimpleBar(el, {
+    scrollbarMaxSize: 28,
+    autoHide: false,
+  });
+})
 
 document.querySelector('.catalog__countries').addEventListener('click', (ev) => {
   if (ev.target.tagName === 'LABEL') {
@@ -102,5 +91,27 @@ document.querySelector('.catalog__list').addEventListener('click', (ev) => {
         break;
       }
     }
+  }
+})
+
+// Edition
+const categoryLegendEdition = document.querySelector('.edition__category legend');
+const listEdition = document.querySelector('.edition__list');
+
+function findLI(el) {
+  if (el.classList.contains('edition__item')) {
+    el.classList.toggle('active');
+  } else {
+    findLI(el.parentNode);
+  }
+}
+
+categoryLegendEdition.addEventListener('click', (ev) => {
+  ev.target.classList.toggle('active');
+})
+
+listEdition.addEventListener('click', (ev) => {
+  if (ev.target.tagName !== 'INPUT') {
+    findLI(ev.target);
   }
 })

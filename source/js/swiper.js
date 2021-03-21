@@ -58,10 +58,10 @@ const swiperProject = new Swiper('.project__swiper', {
   },
 
   breakpoints: {
-    640: {
+    577: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 50,
+      spaceBetween: 34,
     },
     1025: {
       slidesPerView: 3,
@@ -85,7 +85,7 @@ const elSwiperEvent = document.querySelector('.event__swiper-container');
 let swiperEvent;
 
 function mobileSwiper() {
-  if(window.innerWidth <= 640 && elSwiperEvent.dataset.mobile == 'false') {
+  if(window.innerWidth <= 576 && elSwiperEvent.dataset.mobile == 'false') {
     swiperEvent = new Swiper('.event__swiper-container', {
       loop: true,
     
@@ -105,7 +105,7 @@ function mobileSwiper() {
     swiperEvent.update();
   }
 
-  if (window.innerWidth > 640) {
+  if (window.innerWidth > 576) {
     elSwiperEvent.dataset.mobile = 'false';
 
     if (elSwiperEvent.classList.contains('swiper-container-initialized')) {
@@ -118,7 +118,7 @@ const elSwiperEdition = document.querySelector('.edition__swiper');
 let swiperEdition;
 
 function desktopSwiper() {
-  if(window.innerWidth > 640 && elSwiperEdition.dataset.mobile == 'false') {
+  if(window.innerWidth > 576 && elSwiperEdition.dataset.mobile == 'false') {
     swiperEdition = new Swiper('.edition__swiper', {
       slidesPerView: 2,
       slidesPerGroup: 2,
@@ -147,7 +147,7 @@ function desktopSwiper() {
     elSwiperEdition.dataset.mobile = 'true';
   }
 
-  if (window.innerWidth <= 640) {
+  if (window.innerWidth <= 576) {
     elSwiperEdition.dataset.mobile = 'false';
 
     if (elSwiperEdition.classList.contains('swiper-container-initialized')) {
