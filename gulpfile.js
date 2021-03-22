@@ -104,10 +104,10 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/images/*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/img/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("js", "refresh"));;
-  gulp.watch("source/images/*.{png,jpg,svg}", gulp.series("copy", "refresh"));;
+  gulp.watch("source/img/*.{png,jpg,svg}", gulp.series("copy", "refresh"));;
 });
 
 gulp.task("optime", gulp.series("images", "webp"));
