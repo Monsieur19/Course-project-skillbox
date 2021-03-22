@@ -78,9 +78,12 @@ document.querySelector('.catalog__list').addEventListener('click', (ev) => {
   let artist;
   let allArtists;
   if (ev.target.tagName === 'BUTTON') {
+    if (window.innerWidth <= 576) {
+      ev.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('.catalog__list-artists').scrollIntoView();
+    }
+
     artist = ev.target.textContent;
     allArtists = ev.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelectorAll('.catalog__item-artist');
-
     ev.target.parentNode.parentNode.parentNode.parentNode.querySelector('.catalog__accordion-item.active').classList.remove('active');
     ev.target.parentNode.classList.add('active');
 
@@ -115,3 +118,4 @@ listEdition.addEventListener('click', (ev) => {
     findLI(ev.target);
   }
 })
+
