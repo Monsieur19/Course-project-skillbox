@@ -503,16 +503,6 @@
 
     &.active {
       & + .edition__list {
-        position: absolute;
-        top: 100%;
-        left: 0;
-
-        width: 100%;
-
-        background-color: #000;
-
-        z-index: 10;
-        
         & .edition__item {
           display: block;
         }
@@ -530,7 +520,39 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
     &.active {
+      position: relative;
+
       display: block;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 18px;
+        right: 0;
+
+        width: 16px;
+        height: 1px;
+
+        background-color: @main-color;
+
+        transform: rotate(45deg);
+        transition: all .2s ease;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 18px;
+        right: 0;
+
+        width: 16px;
+        height: 1px;
+
+        background-color: @main-color;
+
+        transform: rotate(-45deg);
+        transition: all .2s ease;
+      }
     }
   }
 
@@ -541,19 +563,23 @@
 
   .edition__price {
     width: 100%;
-    margin-bottom: 21px;
+    margin-bottom: 51px;
 
     & h2 {
       margin-bottom: 5px;
     }
   }
 
+  .edition__choice-price {
+    width: 277px;
+  }
+
   .edition__choice-price input {
-    width: 70px;
+    width: 72px;
   }
 
   .edition__price-from {
-    padding: 3px 6px 2px 15px;
+    padding: 3px 10px 2px 10px;
   }
 
   .edition__input-price-from {
@@ -561,7 +587,7 @@
   }
 
   .edition__price-before {
-    padding: 3px 10px 2px 7px;
+    padding: 3px 12px 2px 9px;
   }
 
   .edition__input-price-before {
@@ -569,7 +595,7 @@
   }
 
   .edition__type-money {
-    padding: 3px 10px 2px 6px;
+    padding: 3px 5px 2px 9px;
   }
 
   .edition__swiper {
