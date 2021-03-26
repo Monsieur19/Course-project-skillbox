@@ -147,16 +147,24 @@
   width: 85.71%;
   height: 85.71%;
 
+  text-indent: -999em;
+
   background-color: rgba(0, 0, 0, 0.5);
   background-image: url('../img/Group 12.svg');
   background-position: center center;
   background-repeat: no-repeat;
-
   z-index: 1;
   opacity: 0;
 
   transition: all .2s ease;
   transform: translate(-50%, -50%);
+
+  & > div {
+    position: absolute;
+
+    width: 1px;
+    left: 1px;
+  }
 }
 
 .gallery__swiper--desktop .gallery__swiper-container-btn {
@@ -230,6 +238,63 @@
   color: #fff;
 }
 
+.gallery__modal-container {
+  width: auto;
+  padding: 0;
+  
+  border-radius: 0;
+}
+
+.gallery__modal-content {
+  display: flex;
+
+  border-radius: 0;
+}
+
+.gallery__modal-img {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+
+  overflow: hidden;
+
+  & img {
+    max-width: none;
+    height: 100%;
+  }
+}
+
+.gallery__modal-info {
+  padding: 120px 50px;
+}
+
+.gallery__modal-title {
+  .zero();
+  margin-bottom: 3px;
+
+  .setFont(24px; 32px;);
+  font-weight: 600;
+}
+
+.gallery__modal-name {
+  margin-bottom: 3px;
+
+  .setFont(16px; 22px;);
+  font-weight: 600;
+}
+
+.gallery__modal-date {
+  margin-bottom: 40px;
+
+  .setFont(12px; 16px;);
+}
+
+.gallery__modal-text {
+  max-width: 400px;
+
+  .setFont(16px; 28px;);
+}
+
 @media (max-width: 1270px) {
   .gallery__swiper--desktop .gallery__swiper-img:first-child {
     margin-bottom: 34px;
@@ -268,7 +333,20 @@
   .gallery__swiper--desktop .gallery__swiper-container-btn {
     left: 0;
   }
+
+  .gallery__modal-img {
+    max-width: 264px;
+  }
+
+  .gallery__modal-info {
+    padding-bottom: 90px;
+  }
+
+  .gallery__modal-text {
+    max-width: 230px;
+  }
 }
+
 
 @media (max-width: 768px) {
   .gallery__wrapper {
@@ -314,6 +392,9 @@
     top: 0;
   }
 
+  .gallery__modal-container {
+    width: calc(100% - 100px);
+  }
 }
 
 @media (max-width: 576px) {
@@ -362,6 +443,8 @@
   }
 
   .gallery__swiper-slide {
+    display: flex;
+    justify-content: center;
     height: 367px;
     max-height: 367px;
 
@@ -396,5 +479,32 @@
 
   .gallery__note {
     max-width: 280px;
+  }
+
+  .gallery__modal-container {
+    width: calc(100% - 30px);
+  }
+
+  .gallery__modal-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery__modal-img {
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 200px;
+  }
+
+  .gallery__modal-info {
+    padding: 17px 21px 26px 20px;
+  }
+
+  .gallery__modal-date {
+    margin-bottom: 10px;
+  }
+
+  .gallery__modal-text {
+    max-width: 100%;
   }
 }

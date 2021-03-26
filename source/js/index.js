@@ -119,3 +119,47 @@ listEdition.addEventListener('click', (ev) => {
   }
 })
 
+// модальное окно
+const modal = new GraphModal();
+
+const gallery = document.querySelector('.gallery__right');
+
+const galleryModal = {
+  img: document.querySelector('.gallery__modal-img img'),
+  title: document.querySelector('.gallery__modal-title'),
+  name: document.querySelector('.gallery__modal-name'),
+  date: document.querySelector('.gallery__modal-date'),
+  text: document.querySelector('.gallery__modal-text'),
+};
+
+gallery.addEventListener('click', (ev) => {
+  console.log(ev.target);
+    const slide = {
+      img: ev.target.parentNode.querySelector('img').getAttribute('src'),
+      title: ev.target.querySelector('.gallery__more-title').textContent,
+      name: ev.target.querySelector('.gallery__more-name').textContent,
+      date: ev.target.querySelector('.gallery__more-date').textContent,
+      text: ev.target.querySelector('.gallery__more-text').textContent,
+    };
+
+    galleryModal.img.setAttribute('src', slide.img);
+    galleryModal.title.textContent = slide.title;
+    galleryModal.name.textContent = slide.name;
+    galleryModal.date.textContent = slide.date;
+    galleryModal.text.textContent = slide.text;
+
+    console.log(galleryModal);
+    console.log(slide);
+});
+
+// form
+
+const btnSent = document.querySelector('.contact__btn-order');
+
+btnSent.addEventListener('click', (ev) => {
+  ev.preventDefault();
+  const name = document.querySelector('.contact__input-name').value;
+  const tel = document.querySelector('.contact__input-tel').value;
+  const msg = name + '\n Телефон: ' + tel;
+  window.open('mailto:gerankin.a@mail.ru?subject=Заказ&body=' + msg);
+})
