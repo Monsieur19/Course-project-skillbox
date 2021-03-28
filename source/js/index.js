@@ -79,7 +79,10 @@ document.querySelector('.catalog__list').addEventListener('click', (ev) => {
   let allArtists;
   if (ev.target.tagName === 'BUTTON') {
     if (window.innerWidth <= 576) {
-      ev.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('.catalog__list-artists').scrollIntoView();
+      ev.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('.catalog__list-artists').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
     }
 
     artist = ev.target.textContent;

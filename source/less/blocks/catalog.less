@@ -37,7 +37,7 @@
   background-position: 0 100%;
   cursor: pointer;
 
-  transition: all .2s ease;
+  transition: filter .2s ease;
 
   &:not(:last-child) {
     margin-right: 50px;
@@ -194,7 +194,8 @@
 
   cursor: pointer;
 
-  transition: all .2s ease;
+  transition: border .2s ease,
+              color .2s ease;
 
   &:hover {
     border-bottom: 1px solid @main-color;
@@ -219,7 +220,7 @@
 
   background-color: #ECECEC;
 
-  transition: all .2s ease;
+  transition: background-color .2s ease;
 
   &::before {
     content: '';
@@ -233,6 +234,7 @@
     border-right: 1px solid #000;
 
     transform: rotate(45deg);
+    transition: border .2s ease;
   }
 }
 
@@ -243,7 +245,7 @@
   .setFont(24px; 32px;);
   font-weight: 600;
 
-  transition: all .2s ease;
+  transition: color .2s ease;
 }
 
 .ui-accordion-header.ui-state-active {
@@ -268,8 +270,6 @@
 .catalog__accordion .ui-accordion-header {
   padding: 28px 0 33px 0;
   margin-bottom: 2px;
-
-  transition: all .2s ease;
 
   &:focus {
     outline: 2px solid @outline-color;

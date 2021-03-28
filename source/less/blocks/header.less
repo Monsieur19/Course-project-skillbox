@@ -32,7 +32,7 @@
   .zero();
   margin-right: 11.2%;
 
-  transition: all .2s ease;
+  transition: opacity .2s ease;
 
   &:hover {
     opacity: .7;
@@ -64,7 +64,7 @@
   background: none;
   cursor: pointer;
 
-  transition: all .2s ease;
+  transition: color .2s ease;
 
   &::after {
     content: '';
@@ -78,7 +78,7 @@
     background-image: url('../img/enter.svg');
     background-position: 0 -6px;
 
-    transition: all .2s ease;
+    transition: background-image .2s ease;
   }
 
   &:hover {
@@ -168,7 +168,7 @@
   background-repeat: no-repeat;
   cursor: pointer;
 
-  transition: all .2s ease;
+  transition: border .2s ease;
 
   &::after {
     content: '';
@@ -184,7 +184,7 @@
     background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
     opacity: 0;
 
-    transition: all .2s ease;
+    transition: opacity .2s ease;
   }
 
   &:hover {
@@ -303,7 +303,7 @@
 
   cursor: pointer;
 
-  transition: all .2s ease;
+  transition: color .2s ease;
 
   &.active:after {
     top: 13px;
@@ -322,7 +322,9 @@
     border-right: 1px solid #fff;
 
     transform: rotate(45deg);
-    transition: all .2s ease;
+    transition: border .2s ease,
+                transform .2s ease,
+                top .2s ease;
   }
 
   &:hover {
@@ -359,7 +361,7 @@
   background-position: center bottom;
   cursor: pointer;
 
-  transition: all .2s ease;
+  transition: background-image .2s ease;
 
   &:hover {
     background-image: url('../img/searchHover.svg');
@@ -375,7 +377,7 @@
 
   cursor: pointer;
 
-  transition: all .2s ease;
+  transition: border .2s ease;
 
   &::placeholder {
     color: #fff;
